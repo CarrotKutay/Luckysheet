@@ -14,6 +14,7 @@ import locale from '../locale/locale';
 import {checkProtectionFormatCells} from './protection';
 import Store from '../store';
 import dayjs from 'dayjs'
+import {getOrCreateArray} from "../global/helper";
 
 //条件格式
 const conditionformat = {
@@ -573,7 +574,7 @@ const conditionformat = {
                 let historyRules = _this.getHistoryRules(fileH);
 
                 //保存当前的规则
-                let ruleArr = Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] == undefined ? [] : Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"];
+                let ruleArr = Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] == undefined ? [] : getOrCreateArray(Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"]);
                 ruleArr.push(rule);
                 Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] = ruleArr;
 
@@ -590,7 +591,7 @@ const conditionformat = {
             }
             else if(source == 1){
                 //临时存储新规则
-                let ruleArr = !!_this.fileClone[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] ? _this.fileClone[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] : [];
+                let ruleArr = !!_this.fileClone[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] ? getOrCreateArray(_this.fileClone[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"]) : [];
                 ruleArr.push(rule);
                 _this.fileClone[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] = ruleArr;
 
@@ -1219,7 +1220,7 @@ const conditionformat = {
                 "conditionRange": conditionRange,
                 "conditionValue": conditionValue
             };
-            let ruleArr = Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] == undefined ? [] : Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"];
+            let ruleArr = Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] == undefined ? [] : getOrCreateArray(Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"]);
             ruleArr.push(rule);
             Store.luckysheetfile[getSheetIndex(Store.currentSheetIndex)]["luckysheet_conditionformat_save"] = ruleArr;
 
@@ -3793,7 +3794,7 @@ const conditionformat = {
                 "cellrange": cellrange,
                 "format": format
             };
-            ruleArr = Store.luckysheetfile[index]["luckysheet_conditionformat_save"] == null ? [] : Store.luckysheetfile[index]["luckysheet_conditionformat_save"];
+            ruleArr = Store.luckysheetfile[index]["luckysheet_conditionformat_save"] == null ? [] : getOrCreateArray(Store.luckysheetfile[index]["luckysheet_conditionformat_save"]);
             ruleArr.push(rule);
         }
 
