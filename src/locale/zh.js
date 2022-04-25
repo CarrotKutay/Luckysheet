@@ -9542,7 +9542,7 @@ export default {
         filterValueByTip:"按照值进行筛选",
         filterConform:"确 认",
         filterCancel:"取 消",
-        clearFilter:"清除筛选",
+        /*clearFilter:"清除筛选",*/
 
         conditionNone:"无",
         conditionCellIsNull:"单元格为空",

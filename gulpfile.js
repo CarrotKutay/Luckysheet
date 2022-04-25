@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 // gulp core function
-const { src, dest, series, parallel, watch } = require('gulp');
+const {src, dest, series, parallel, watch} = require('gulp');
 // gulp compress js
 const uglify = require('gulp-uglify');
 // gulp judgment
@@ -13,15 +13,15 @@ const del = require('delete');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 // proxy
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const {createProxyMiddleware} = require('http-proxy-middleware');
 // According to html reference, files are merged
 // const useref = require('gulp-useref');
 // File merge
 const concat = require('gulp-concat');
 // rollup packaging, processing es6 modules
-const { rollup } = require('rollup');
+const {rollup} = require('rollup');
 // rollup looks for node_modules module
-const { nodeResolve } = require('@rollup/plugin-node-resolve');
+const {nodeResolve} = require('@rollup/plugin-node-resolve');
 // rollup converts commonjs module to es6 module
 const commonjs = require('@rollup/plugin-commonjs');
 // rollup code compression
@@ -30,7 +30,7 @@ const terser = require('rollup-plugin-terser').terser;
 const babel = require('@rollup/plugin-babel').default;
 // const gulpBabel = require('gulp-babel');
 // Distinguish development and production environments
-const production = process.env.NODE_ENV === 'production' ? true : false;
+const production = process.env.NODE_ENV === 'production';
 
 const pkg = require('./package.json');
 const banner = `/*! @preserve
@@ -48,11 +48,10 @@ const uglifyOptions = {
 
 // babel config
 const babelConfig = {
-    compact:false,
+    compact: false,
     babelHelpers: 'bundled',
     exclude: 'node_modules/**', // Only compile our source code
-    plugins: [
-    ],
+    plugins: [],
     presets: [
         ['@babel/preset-env', {
             useBuiltIns: 'usage',
@@ -74,7 +73,7 @@ const paths = {
     staticImages: ['src/plugins/images/*.png'],
     staticExpendPlugins: ['src/expendPlugins/**', '!src/expendPlugins/**/plugin.js'],
     staticDemoData: ['src/demoData/*.js'],
-    staticCssImages: ['src/css/**','!src/css/*.css'],
+    staticCssImages: ['src/css/**', '!src/css/*.css'],
 
     // static resources dest
     destStaticHtml: ['dist'],
@@ -86,20 +85,31 @@ const paths = {
     destStaticCssImages: ['dist/css'],
 
     //core es module
-    core: ['src/**/*.js','!src/demoData/*.js','src/expendPlugins/**/plugin.js','!src/plugins/js/*.js'],
+    core: ['src/**/*.js', '!src/demoData/*.js', 'src/expendPlugins/**/plugin.js', '!src/plugins/js/*.js'],
 
-     //plugins src
+    //plugins src
     pluginsCss: ['src/plugins/css/*.css'],
     plugins: ['src/plugins/*.css'],
-    css:['src/css/*.css','node_modules/flatpickr/dist/themes/light.css'],
-    pluginsJs:[
+    css: ['src/css/*.css', 'node_modules/flatpickr/dist/themes/light.css'],
+    pluginsJsGemaProd: [
+        'node_modules/uuid/dist/umd/uuid.min.js',
+        'src/plugins/js/clipboard.min.js',
+        'src/plugins/js/spectrum.min.js',
+        /*'src/plugins/js/numeral.min.js',*/
+        'src/plugins/js/html2canvas.min.js',
+        'src/plugins/js/localforage.min.js',
+        'src/plugins/js/lodash.min.js',
+        'src/plugins/js/jstat.min.js',
+        'src/plugins/js/crypto-api.min.js'
+    ],
+    pluginsJsStandalone: [
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/uuid/dist/umd/uuid.min.js',
         'src/plugins/js/clipboard.min.js',
         'src/plugins/js/spectrum.min.js',
         'src/plugins/js/jquery-ui.min.js',
         'src/plugins/js/jquery.mousewheel.min.js',
-        // 'src/plugins/js/numeral.min.js',
+        /*'src/plugins/js/numeral.min.js',*/
         'src/plugins/js/html2canvas.min.js',
         'src/plugins/js/localforage.min.js',
         'src/plugins/js/lodash.min.js',
@@ -149,22 +159,22 @@ function serve(done) {
 
 // Monitoring file changes
 function watcher(done) {
-    watch(paths.core,{ delay: 500 }, series(core, reloadBrowser));
+    watch(paths.core, {delay: 500}, series(core, reloadBrowser));
 
     // watch plugins and css
-    watch(paths.pluginsCss,{ delay: 500 }, series(pluginsCss, reloadBrowser));
-    watch(paths.plugins,{ delay: 500 }, series(plugins, reloadBrowser));
-    watch(paths.css,{ delay: 500 }, series(css, reloadBrowser));
-    watch(paths.pluginsJs,{ delay: 500 }, series(pluginsJs, reloadBrowser));
+    watch(paths.pluginsCss, {delay: 500}, series(pluginsCss, reloadBrowser));
+    watch(paths.plugins, {delay: 500}, series(plugins, reloadBrowser));
+    watch(paths.css, {delay: 500}, series(css, reloadBrowser));
+    watch(production ? paths.pluginsJsGemaProd : paths.pluginsJsStandalone, {delay: 500}, series(pluginsJs, reloadBrowser));
 
     // watch static
-    watch(paths.staticHtml,{ delay: 500 }, series(copyStaticHtml, reloadBrowser));
-    watch(paths.staticFonts,{ delay: 500 }, series(copyStaticFonts, reloadBrowser));
-    watch(paths.staticAssets,{ delay: 500 }, series(copyStaticAssets, reloadBrowser));
-    watch(paths.staticImages,{ delay: 500 }, series(copyStaticImages, reloadBrowser));
-    watch(paths.staticExpendPlugins,{ delay: 500 }, series(copyStaticExpendPlugins, reloadBrowser));
-    watch(paths.staticDemoData,{ delay: 500 }, series(copyStaticDemoData, reloadBrowser));
-    watch(paths.staticCssImages,{ delay: 500 }, series(copyStaticCssImages, reloadBrowser));
+    watch(paths.staticHtml, {delay: 500}, series(copyStaticHtml, reloadBrowser));
+    watch(paths.staticFonts, {delay: 500}, series(copyStaticFonts, reloadBrowser));
+    watch(paths.staticAssets, {delay: 500}, series(copyStaticAssets, reloadBrowser));
+    watch(paths.staticImages, {delay: 500}, series(copyStaticImages, reloadBrowser));
+    watch(paths.staticExpendPlugins, {delay: 500}, series(copyStaticExpendPlugins, reloadBrowser));
+    watch(paths.staticDemoData, {delay: 500}, series(copyStaticDemoData, reloadBrowser));
+    watch(paths.staticCssImages, {delay: 500}, series(copyStaticCssImages, reloadBrowser));
 
     done();
 }
@@ -198,17 +208,17 @@ async function core_rollup() {
         format: 'umd',
         name: 'luckysheet',
         sourcemap: true,
-        inlineDynamicImports:true,
+        inlineDynamicImports: true,
         banner: banner
     });
 
-    if(production){
+    if (production) {
         bundle.write({
             file: 'dist/luckysheet.esm.js',
             format: 'esm',
             name: 'luckysheet',
             sourcemap: true,
-            inlineDynamicImports:true,
+            inlineDynamicImports: true,
             banner: banner
         });
     }
@@ -219,16 +229,16 @@ async function core() {
 
     await require('esbuild').buildSync({
         format: 'iife',
-        globalName: 'luckysheet',    
+        globalName: 'luckysheet',
         entryPoints: ['src/index.js'],
         bundle: true,
         minify: production,
-        banner: { js: banner },
+        banner: {js: banner},
         target: ['es2015'],
         sourcemap: true,
         outfile: 'dist/luckysheet.umd.js',
         logLevel: 'error',
-      })
+    })
 }
 
 // According to the build tag in html, package js and css
@@ -248,49 +258,62 @@ function plugins() {
 }
 
 function css() {
-    return  src(paths.css)
+    return src(paths.css)
         .pipe(concat(paths.concatCss))
         .pipe(gulpif(production, cleanCSS()))
         .pipe(dest(paths.destCss));
 }
 
 function pluginsJs() {
-    return  src(paths.pluginsJs)
-        .pipe(concat(paths.concatPluginsJs))
-        .pipe(gulpif(production, uglify(uglifyOptions)))
-        .pipe(dest(paths.destPluginsJs));
+    if (production) {
+        return src(paths.pluginsJsGemaProd)
+            .pipe(concat(paths.concatPluginsJs))
+            .pipe(gulpif(production, uglify(uglifyOptions)))
+            .pipe(dest(paths.destPluginsJs))
+    } else {
+        return src(paths.pluginsJsStandalone)
+            .pipe(concat(paths.concatPluginsJs))
+            .pipe(gulpif(production, uglify(uglifyOptions)))
+            .pipe(dest(paths.destPluginsJs));
+    }
 }
 
 // Copy static resources
-function copyStaticHtml(){
+function copyStaticHtml() {
     return src(paths.staticHtml)
         .pipe(dest(paths.destStaticHtml));
 }
-function copyStaticFonts(){
+
+function copyStaticFonts() {
     return src(paths.staticFonts)
         .pipe(dest(paths.destStaticFonts));
 }
-function copyStaticAssets(){
+
+function copyStaticAssets() {
     return src(paths.staticAssets)
         .pipe(dest(paths.destStaticAssets));
 }
-function copyStaticImages(){
+
+function copyStaticImages() {
     return src(paths.staticImages)
         .pipe(dest(paths.destStaticImages));
 }
-function copyStaticExpendPlugins(){
+
+function copyStaticExpendPlugins() {
     return src(paths.staticExpendPlugins)
         .pipe(dest(paths.destStaticExpendPlugins));
 }
-function copyStaticDemoData(){
+
+function copyStaticDemoData() {
     return src(paths.staticDemoData)
         .pipe(dest(paths.destStaticDemoData));
-        // .pipe(gulpBabel({
-        //     presets: ['@babel/env']
-        // }))
-        // .pipe(gulp.dest('dist'));
+    // .pipe(gulpBabel({
+    //     presets: ['@babel/env']
+    // }))
+    // .pipe(gulp.dest('dist'));
 }
-function copyStaticCssImages(){
+
+function copyStaticCssImages() {
     return src(paths.staticCssImages)
         .pipe(dest(paths.destStaticCssImages));
 }

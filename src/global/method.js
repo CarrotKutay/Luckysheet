@@ -177,11 +177,11 @@ const defaultConfig = {
         rangeMoveRangedata: null,
         functionHTMLIndex: 0,
         functionRangeIndex: null,
-        execvertex: {},
+        /* execvertex: {},
         execFunctionGroupData: null,
         execFunctionExist: null,
         formulaContainSheetList:{},
-        cellTextToIndexList:{},
+        cellTextToIndexList:{}, */
         isFunctionRangeSave: false,
         execvertex: {},
         execFunctionGroupData: null,
