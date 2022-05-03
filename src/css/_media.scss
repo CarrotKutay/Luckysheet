@@ -1,0 +1,12 @@
+$productionPath: "/skin/resources/skins/common/luckysheet/";
+
+$waffle_sprite_local: "waffle_sprite.png";
+$waffle_sprite_production:  $productionPath + "css/" + $waffle_sprite_local;
+$loading_local: "loading.gif";
+$loading_production: $productionPath + "css/" + $loading_local;
+$cfDataBar_local: "../plugins/images/CFdataBar.png";
+$cfDataBar_production: $productionPath + "plugins/images/CFdataBar.png";
+$cfColorGradient_local: "../plugins/images/CFcolorGradation.png";
+$cfColorGradient_production: $productionPath + "plugins/images/CFcolorGradation.png";
+$cfIcons_local: "../plugins/images/CFicons.png";
+$cfIcons_production: $productionPath + "plugins/images/CFicons.png";

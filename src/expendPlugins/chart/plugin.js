@@ -22,7 +22,28 @@ let _colLocation = colLocation
 const env_prod = process.env.NODE_ENV === 'production';
 const chartmixCssPath = 'expendPlugins/chart/chartmix.css';
 const chartmixJsPath = 'expendPlugins/chart/chartmix.umd.js';
-const productionCSSResourcePath = '/skin/resources/skins/common/luckysheet/luckysheet.css';
+const productionResourcePath = '/skin/resources/skins/common/luckysheet/';
+const productionCssMain = productionResourcePath + "luckysheet.css";
+const resourcesCss = [
+    "css/arrow-down.png",
+    "css/EwaAntH.gif",
+    "css/EwaAntV.gif",
+    "css/loading.gif",
+    "waffle_sprite.png"
+];
+const resourcesPluginsImages = [
+    "plugins/images/CFColorGradation.png",
+    "plugins/images/CFdataBar.png",
+    "plugins/images/CFicons.png",
+    "plugins/images/icon_dropCell.png",
+    "plugins/images/js.png",
+    "plugins/images/ui-icons_444444_256x240.png",
+    "plugins/images/ui-icons_555555_256x240.png",
+    "plugins/images/ui-icons_777620_256x240.png",
+    "plugins/images/ui-icons_777777_256x240.png",
+    "plugins/images/ui-icons_cc0000_256x240.png",
+    "plugins/images/ui-icons_ffffff_256x240.png"
+]
 const productionJSResourcePath = '/gema/smileyfaces-development.js?resource=luckysheet/dist/';
 
 // Dynamically load dependent scripts and styles
@@ -35,8 +56,17 @@ const dependScripts = [
 ];
 const dependLinks = [
     'https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/theme-chalk/index.css',
-    env_prod ? productionCSSResourcePath : chartmixCssPath
+    env_prod ? productionCssMain : chartmixCssPath
 ];
+
+if (env_prod) {
+    resourcesPluginsImages.forEach(resource => {
+        dependLinks.push(''.concat(productionResourcePath, resource))
+    })
+    resourcesCss.forEach(resource => {
+        dependLinks.push(''.concat(productionResourcePath, resource))
+    })
+}
 
 // Initialize the chart component
 function chart(data, isDemo) {

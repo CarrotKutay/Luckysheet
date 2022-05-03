@@ -22498,12 +22498,12 @@ var es_array_map = __webpack_require__("d81d");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26bab996-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/ChartSetting.vue?vue&type=template&id=2c0e08b9&
-var ChartSettingvue_type_template_id_2c0e08b9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chartSetting"},[_c('div',{staticStyle:{"overflow":"hidden","height":"100%"}},[_c('chart-list',{attrs:{"chartAllType":_vm.currentChartType,"showList":_vm.showList,"lang":_vm.lang},on:{"closeChartShowList":function($event){_vm.showList=false}}}),_c('div',{staticStyle:{"display":"flex","flex-direction":"column"}},[_c('el-tabs',{attrs:{"type":"card"},on:{"tab-click":_vm.handleClick},model:{value:(_vm.activeName),callback:function ($$v) {_vm.activeName=$$v},expression:"activeName"}},[_c('el-tab-pane',{attrs:{"name":"data"}},[_c('span',{attrs:{"slot":"label"},slot:"label"},[_c('i',{staticClass:"el-icon-date"}),_vm._v(" "+_vm._s(_vm.setItem.data)+" ")]),_c('el-row',[_c('el-col',{attrs:{"span":2}},[_c('div',[_vm._v(" ")])]),_c('el-col',{attrs:{"span":22}},[_c('div',{staticStyle:{"margin-top":"1px"}},[_vm._v(_vm._s(_vm.setItem.chartType))]),_c('div',{staticStyle:{"margin-top":"10px"}},[_c('el-button',{staticStyle:{"width":"100%"},attrs:{"size":"small"},on:{"click":function($event){_vm.showList = !_vm.showList}}},[_c('i',{staticClass:"iconfont",class:_vm.chartTypeTxt[0],staticStyle:{"float":"left"}}),_vm._v(" "+_vm._s(_vm.chartTypeTxt[1])+" "),_c('i',{staticClass:"iconfont icon-jiantou",staticStyle:{"float":"right"}})])],1),_c('div',{staticStyle:{"margin-top":"25px"}}),(_vm.chartXYSeriesList)?_c('div',_vm._l((_vm.chartXYSeriesList.fix),function(item){return _c('div',{key:item.title,staticStyle:{"margin-top":"10px"}},[_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{staticStyle:{"line-height":"28px","text-align":"right"},attrs:{"span":4}},[_vm._v(_vm._s(item.title)+":")]),_c('el-col',{attrs:{"span":20}},[_c('el-tag',{staticStyle:{"width":"100%","text-align":"center"},attrs:{"size":"medium"}},[_c('i',{staticClass:"iconfont",class:item.type,staticStyle:{"float":"left"}}),_vm._v(" "+_vm._s(item.field)+" ")])],1)],1)],1)}),0):_vm._e(),_c('div',{staticStyle:{"margin-top":"25px"}}),(_vm.chartXYSeriesList)?_c('div',_vm._l((_vm.chartXYSeriesList.change),function(item,index){return _c('div',{key:index,staticStyle:{"margin-top":"10px"}},[_c('el-row',{staticStyle:{"display":"flex"},attrs:{"gutter":10}},[_c('el-col',{staticStyle:{"line-height":"28px","text-align":"right","width":"unset","flex-shrink":"1"}},[_vm._v(_vm._s(item.title)+":")]),_c('el-col',{staticStyle:{"flex-grow":"1","width":"unset"}},[_c('el-dropdown',{staticStyle:{"width":"100%"},attrs:{"size":"medium","trigger":"click"},on:{"command":_vm.handleSeriseCommand}},[_c('el-button',{staticStyle:{"width":"100%"},attrs:{"size":"mini"}},[_c('i',{staticClass:"iconfont",class:item.type,staticStyle:{"float":"left","font-size":"16px"}}),_vm._v(" "+_vm._s(item.field)+" "),_c('i',{staticClass:"iconfont icon-jiantou",staticStyle:{"float":"right"}})]),_c('el-dropdown-menu',{staticStyle:{"min-width":"306px"},attrs:{"slot":"dropdown"},slot:"dropdown"},_vm._l((_vm.chartXYSeriesList.option),function(ditem,index){return _c('el-dropdown-item',{key:("A-" + index),attrs:{"command":{series:item, option:ditem}}},[_vm._v(" "+_vm._s(ditem.field)+" "),(item.id==ditem.id)?_c('i',{staticClass:"iconfont icon-dagou",staticStyle:{"float":"right"}}):_vm._e()])}),1)],1)],1)],1)],1)}),0):_vm._e(),_c('div',{staticStyle:{"margin-top":"25px"}}),_c('el-row',[_c('div',{staticStyle:{"margin":"25px 0"}}),_c('el-checkbox',{on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeConfigCheck),callback:function ($$v) {_vm.currentRangeConfigCheck=$$v},expression:"currentRangeConfigCheck"}},[_vm._v(_vm._s(_vm.setItem.transpose))]),_c('div',{staticStyle:{"margin":"15px 0"}}),_c('el-checkbox',{attrs:{"disabled":_vm.checkRowDisabled},on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeRowCheck.exits),callback:function ($$v) {_vm.$set(_vm.currentRangeRowCheck, "exits", $$v)},expression:"currentRangeRowCheck.exits"}},[_vm._v(_vm._s(_vm.setItem.row1)+" "+_vm._s(_vm.getColRowCheckTxt(true))+" "+_vm._s(_vm.setItem.row2))]),_c('div',{staticStyle:{"margin":"15px 0"}}),_c('el-checkbox',{attrs:{"disabled":_vm.checkColDisabled},on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeColCheck.exits),callback:function ($$v) {_vm.$set(_vm.currentRangeColCheck, "exits", $$v)},expression:"currentRangeColCheck.exits"}},[_vm._v(_vm._s(_vm.setItem.column1)+" "+_vm._s(_vm.getColRowCheckTxt())+" "+_vm._s(_vm.setItem.column2))])],1)],1)],1)],1),_c('el-tab-pane',[_c('span',{attrs:{"slot":"label"},slot:"label"},[_c('i',{staticClass:"el-icon-s-data"}),_vm._v(" "+_vm._s(_vm.setItem.style)+" ")]),_c('el-row',[_c('el-col',{attrs:{"span":1}},[_c('div',[_vm._v(" ")])]),_c('el-col',{attrs:{"span":22}},[_c('el-collapse',[_c('chart-title',{attrs:{"router":'title',"chartAllType":_vm.currentChartType,"titleOption":_vm.titleOption,"lang":_vm.lang}}),_c('chart-sub-title',{attrs:{"router":'subtitle',"chartAllType":_vm.currentChartType,"subTitleOption":_vm.subTitleOption,"lang":_vm.lang}}),_c('chart-cursor',{attrs:{"router":'tooltip',"chartAllType":_vm.currentChartType,"cursorOption":_vm.cursorOption,"lang":_vm.lang}}),_c('chart-legend',{attrs:{"router":'legend',"chartAllType":_vm.currentChartType,"legendOption":_vm.legendOption,"lang":_vm.lang}}),(_vm.currentChartType.split('|')[1]!='pie')?_c('chart-axis',{attrs:{"router":'axis',"axisOption":_vm.axisOption,"chartAllType":_vm.currentChartType,"lang":_vm.lang}}):_vm._e()],1)],1),_c('el-col',{attrs:{"span":1}},[_c('div',[_vm._v(" ")])])],1)],1)],1)],1)],1)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26bab996-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/ChartSetting.vue?vue&type=template&id=397fdf2b&
+var ChartSettingvue_type_template_id_397fdf2b_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chartSetting"},[_c('div',{staticStyle:{"overflow":"hidden","height":"100%"}},[_c('chart-list',{attrs:{"chartAllType":_vm.currentChartType,"showList":_vm.showList,"lang":_vm.lang},on:{"closeChartShowList":function($event){_vm.showList=false}}}),_c('div',{staticStyle:{"display":"flex","flex-direction":"column"}},[_c('el-tabs',{attrs:{"type":"card"},on:{"tab-click":_vm.handleClick},model:{value:(_vm.activeName),callback:function ($$v) {_vm.activeName=$$v},expression:"activeName"}},[_c('el-tab-pane',{attrs:{"name":"data"}},[_c('span',{attrs:{"slot":"label"},slot:"label"},[_c('i',{staticClass:"el-icon-date"}),_vm._v(" "+_vm._s(_vm.setItem.data)+" ")]),_c('el-row',[_c('el-col',{attrs:{"span":2}},[_c('div',[_vm._v(" ")])]),_c('el-col',{attrs:{"span":22}},[_c('div',{staticStyle:{"margin-top":"1px"}},[_vm._v(_vm._s(_vm.setItem.chartType))]),_c('div',{staticStyle:{"margin-top":"10px"}},[_c('el-button',{staticStyle:{"width":"100%"},attrs:{"size":"small"},on:{"click":function($event){_vm.showList = !_vm.showList}}},[_c('i',{staticClass:"iconfont",class:_vm.chartTypeTxt[0],staticStyle:{"float":"left"}}),_vm._v(" "+_vm._s(_vm.chartTypeTxt[1])+" "),_c('i',{staticClass:"iconfont icon-jiantou",staticStyle:{"float":"right"}})])],1),_c('div',{staticStyle:{"margin-top":"25px"}}),(_vm.chartXYSeriesList)?_c('div',_vm._l((_vm.chartXYSeriesList.fix),function(item){return _c('div',{key:item.title,staticStyle:{"margin-top":"10px"}},[_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{staticStyle:{"line-height":"28px","text-align":"right"},attrs:{"span":4}},[_vm._v(_vm._s(item.title)+":")]),_c('el-col',{attrs:{"span":20}},[_c('el-tag',{staticStyle:{"width":"100%","text-align":"center"},attrs:{"size":"medium"}},[_c('i',{staticClass:"iconfont",class:item.type,staticStyle:{"float":"left"}}),_vm._v(" "+_vm._s(item.field)+" ")])],1)],1)],1)}),0):_vm._e(),_c('div',{staticStyle:{"margin-top":"25px"}}),(_vm.chartXYSeriesList)?_c('div',_vm._l((_vm.chartXYSeriesList.change),function(item,index){return _c('div',{key:index,staticStyle:{"margin-top":"10px"}},[_c('el-row',{staticStyle:{"display":"flex"},attrs:{"gutter":10}},[_c('el-col',{staticStyle:{"line-height":"28px","text-align":"right","width":"unset","flex-shrink":"1"}},[_vm._v(_vm._s(item.title)+":")]),_c('el-col',{staticStyle:{"flex-grow":"1","width":"unset"}},[_c('el-dropdown',{staticStyle:{"width":"100%"},attrs:{"size":"medium","trigger":"click"},on:{"command":_vm.handleSeriseCommand}},[_c('el-button',{staticStyle:{"width":"100%"},attrs:{"size":"mini"}},[_c('i',{staticClass:"iconfont",class:item.type,staticStyle:{"float":"left","font-size":"16px"}}),_vm._v(" "+_vm._s(item.field)+" "),_c('i',{staticClass:"iconfont icon-jiantou",staticStyle:{"float":"right"}})]),_c('el-dropdown-menu',{staticStyle:{"min-width":"306px"},attrs:{"slot":"dropdown"},slot:"dropdown"},_vm._l((_vm.chartXYSeriesList.option),function(ditem,index){return _c('el-dropdown-item',{key:("A-" + index),attrs:{"command":{series:item, option:ditem}}},[_vm._v(" "+_vm._s(ditem.field)+" "),(item.id==ditem.id)?_c('i',{staticClass:"iconfont icon-dagou",staticStyle:{"float":"right"}}):_vm._e()])}),1)],1)],1)],1)],1)}),0):_vm._e(),_c('div',{staticStyle:{"margin-top":"25px"}}),_c('el-row',[_c('div',{staticStyle:{"margin":"25px 0"}}),_c('el-checkbox',{on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeConfigCheck),callback:function ($$v) {_vm.currentRangeConfigCheck=$$v},expression:"currentRangeConfigCheck"}},[_vm._v(_vm._s(_vm.setItem.transpose))]),_c('div',{staticStyle:{"margin":"15px 0"}}),_c('el-checkbox',{attrs:{"disabled":_vm.checkRowDisabled},on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeRowCheck.exits),callback:function ($$v) {_vm.$set(_vm.currentRangeRowCheck, "exits", $$v)},expression:"currentRangeRowCheck.exits"}},[_vm._v(_vm._s(_vm.setItem.row1)+" "+_vm._s(_vm.getColRowCheckTxt(true))+" "+_vm._s(_vm.setItem.row2))]),_c('div',{staticStyle:{"margin":"15px 0"}}),_c('el-checkbox',{attrs:{"disabled":_vm.checkColDisabled},on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeColCheck.exits),callback:function ($$v) {_vm.$set(_vm.currentRangeColCheck, "exits", $$v)},expression:"currentRangeColCheck.exits"}},[_vm._v(_vm._s(_vm.setItem.column1)+" "+_vm._s(_vm.getColRowCheckTxt())+" "+_vm._s(_vm.setItem.column2))])],1)],1)],1)],1),_c('el-tab-pane',[_c('span',{attrs:{"slot":"label"},slot:"label"},[_c('i',{staticClass:"el-icon-s-data"}),_vm._v(" "+_vm._s(_vm.setItem.style)+" ")]),_c('el-row',[_c('el-col',{attrs:{"span":1}},[_c('div',[_vm._v(" ")])]),_c('el-col',{attrs:{"span":22}},[_c('el-collapse',[_c('chart-title',{attrs:{"router":'title',"chartAllType":_vm.currentChartType,"titleOption":_vm.titleOption,"lang":_vm.lang}}),_c('chart-sub-title',{attrs:{"router":'subtitle',"chartAllType":_vm.currentChartType,"subTitleOption":_vm.subTitleOption,"lang":_vm.lang}}),_c('chart-cursor',{attrs:{"router":'tooltip',"chartAllType":_vm.currentChartType,"cursorOption":_vm.cursorOption,"lang":_vm.lang}}),_c('chart-legend',{attrs:{"router":'legend',"chartAllType":_vm.currentChartType,"legendOption":_vm.legendOption,"lang":_vm.lang}}),(_vm.currentChartType.split('|')[1]!='pie')?_c('chart-axis',{attrs:{"router":'axis',"axisOption":_vm.axisOption,"chartAllType":_vm.currentChartType,"lang":_vm.lang}}):_vm._e()],1)],1),_c('el-col',{attrs:{"span":1}},[_c('div',[_vm._v(" ")])])],1)],1)],1)],1)],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/packages/ChartMix/ChartSetting.vue?vue&type=template&id=2c0e08b9&
+// CONCATENATED MODULE: ./src/packages/ChartMix/ChartSetting.vue?vue&type=template&id=397fdf2b&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
 var es_regexp_exec = __webpack_require__("ac1f");
@@ -31338,9 +31338,14 @@ function changeChartRange(chart_id, chartData, rangeArray, rangeTxt) {
 
 function changeChartCellData(chart_id, chartData) {
   var index = src_store.state.chartSetting.chartLists.findIndex(function (item) {
-    return item.chart_id == chart_id;
+    return item.chart_id === chart_id;
   });
   src_store.state.chartSetting.currentChartIndex = index;
+
+  if (src_store.state.chartSetting.chartLists[index] === undefined) {
+    return;
+  }
+
   var chart_json = src_store.state.chartSetting.chartLists[index].chartOptions;
   var chartAllType = chart_json.chartAllType;
   var chartAllTypeArray = chartAllType.split("|");
@@ -33532,6 +33537,247 @@ var ChartAxis_component = normalizeComponent(
 )
 
 /* harmony default export */ var ChartAxis = (ChartAxis_component.exports);
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
+var es_array_splice = __webpack_require__("a434");
+
+// EXTERNAL MODULE: external "echarts"
+var external_echarts_ = __webpack_require__("164e");
+var external_echarts_default = /*#__PURE__*/__webpack_require__.n(external_echarts_);
+
+// CONCATENATED MODULE: ./src/utils/exportUtil.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+var ChartSetting = src_store.state.chartSetting; // init chart
+
+function initChart(outDom, lang) {
+  var dom = document.createElement('div');
+  dom.id = 'chartmix';
+  outDom.appendChild(dom);
+  new external_Vue_default.a({
+    el: '#chartmix',
+    store: src_store,
+    data: function data() {
+      return {
+        lang: lang
+      };
+    },
+    computed: {
+      chartOptions: function chartOptions() {
+        if (!ChartSetting.currentChartIndex) {
+          return null;
+        }
+
+        return ChartSetting.chartLists[ChartSetting.currentChartIndex].chartOptions;
+      }
+    },
+    template: "<ChartSetting :lang=\"lang\" :chartOptions=\"chartOptions\"></ChartSetting>"
+  });
+}
+/**
+ * 
+ * @param {*} render 插入图表的容器
+ * @param {*} chartData 框选的数据
+ * @param {*} chart_id 图表ID
+ * 返回容器/id/chart_json图表配置
+ */
+
+
+function createChart(render, chartData, chart_id, rangeArray, rangeTxt) {
+  var chart_Id = chart_id ? chart_id : generateRandomKey('chart');
+  render.id = chart_Id;
+  chartJson_chartOptions.defaultOption.series = []; // 随机生成图表
+
+  var ratio = Math.random() * 10;
+
+  if (ratio > 5) {
+    chartJson_chartOptions.chartAllType = 'echarts|pie|default';
+  } else {
+    chartJson_chartOptions.chartAllType = 'echarts|line|default';
+  } // 生成图表数据结构
+
+
+  var chartOption = insertNewChart(chartJson_chartOptions, chart_Id, chartJson_chartOptions.chartAllType, chartData, rangeArray, rangeTxt);
+  var renderDom = document.createElement('div');
+  renderDom.id = 'render' + chart_Id;
+  render.appendChild(renderDom);
+  var chart_json = {
+    'chart_id': chart_Id,
+    'active': true,
+    'chartOptions': deepCopy(chartOption)
+  };
+  ChartSetting.currentChartIndex = ChartSetting.chartLists.length;
+  ChartSetting.chartLists.push(chart_json);
+  console.dir(chart_json);
+  new external_Vue_default.a({
+    el: '#render' + chart_Id,
+    store: src_store,
+    data: function data() {
+      return {
+        chart_Id: chart_Id
+      };
+    },
+    computed: {
+      options: function options() {
+        var _this = this;
+
+        var chartJson = ChartSetting.chartLists.find(function (item) {
+          return item.chart_id == _this.chart_Id;
+        });
+
+        if (chartJson) {
+          return chartJson.chartOptions;
+        } else {
+          return null;
+        }
+      },
+      active: function active() {
+        var _this2 = this;
+
+        var chartJson = ChartSetting.chartLists.find(function (item) {
+          return item.chart_id == _this2.chart_Id;
+        });
+
+        if (chartJson) {
+          return chartJson.active;
+        } else {
+          return null;
+        }
+      }
+    },
+    template: "<ChartRender :chartOptions=\"options\" :chart_id=\"chart_Id\" :active=\"active\"></ChartRneder>"
+  });
+  return {
+    render: render,
+    chart_Id: chart_Id,
+    chart_json: chart_json
+  };
+} // insert chart
+
+
+function insertNewChart(chartOptions, chart_id, chartAllType, chartData, rangeArray, rangeTxt, chartTheme, height, width, left, top) {
+  var chart_json = {};
+  var chartAllTypeArray = chartAllType.split('|');
+  var chartPro = chartAllTypeArray[0],
+      chartType = chartAllTypeArray[1],
+      chartStyle = chartAllTypeArray[2];
+  chart_json.chart_id = chart_id;
+  chart_json.chartAllType = chartAllType;
+  chart_json.chartPro = chartPro;
+  chart_json.chartType = chartType;
+  chart_json.chartStyle = chartStyle;
+  chart_json.height = height;
+  chart_json.width = width;
+  chart_json.left = left;
+  chart_json.top = top; //按照图表类型得到图表的默认设置
+
+  var defaultOptionIni = chartOptions.defaultOption; //数据的sheet索引
+
+  chart_json.chartData = chartData;
+  chart_json.rangeArray = rangeArray;
+  chart_json.rangeTxt = rangeTxt; //根据数据集得到按钮状态，rangeColCheck表示首列是否标题，rangeRowCheck表示首行是否标题，rangeConfigCheck表示是否转置。
+
+  var rowColCheck = getRowColCheck(chartData);
+  var rangeRowCheck = rowColCheck[0],
+      rangeColCheck = rowColCheck[1],
+      rangeConfigCheck = false;
+  chart_json.rangeColCheck = rangeColCheck;
+  chart_json.rangeRowCheck = rangeRowCheck;
+  chart_json.rangeConfigCheck = rangeConfigCheck; //按照数据范围文字得到具体数据范围
+
+  var rangeSplitArray = getRangeSplitArray(chartData, rangeArray, rangeColCheck, rangeRowCheck);
+  chart_json.rangeSplitArray = rangeSplitArray; //根据数据集、功能按钮状态、图表类型，得到图表可操作的数据格式，例如：{ "x":[], "y":[], series:[] }，可以按照次格式渲染数据页中的系列和轴控件。
+  //数据为一行且为汉字的时候，chartDataCache的series为空数组
+
+  var chartDataCache = getChartDataCache(chartData, rangeSplitArray, chartPro, chartType, chartStyle);
+  chart_json.chartDataCache = chartDataCache; //生成默认的系列顺序，默认根据series数组的位置，用户可以在界面上操作更改这个位置。
+
+  var chartDataSeriesOrder = getChartDataSeriesOrder(chartDataCache.series[0].length);
+  chart_json.chartDataSeriesOrder = chartDataSeriesOrder; //设置图表皮肤
+
+  chart_json.chartTheme = chartTheme; //根据图表的默认设置、图表数据、图表系列顺序，等到一个完整的图表配置串。
+
+  var defaultOption = addDataToOption(defaultOptionIni, chartDataCache, chartDataSeriesOrder, chartPro, chartType, chartStyle); //根据图表厂商选择渲染引擎，并根据设置渲染出图表
+
+  chart_json.defaultOption = defaultOption;
+  return chart_json;
+} // highlight current chart
+
+
+function highlightChart(chart_id) {
+  var index = ChartSetting.chartLists.findIndex(function (item) {
+    return item.chart_id == chart_id;
+  });
+  ChartSetting.currentChartIndex = index;
+  return ChartSetting.chartLists[ChartSetting.currentChartIndex].chartOptions;
+} // resize chart
+
+
+function resizeChart(chart_id) {
+  var index = ChartSetting.chartLists.findIndex(function (item) {
+    return item.chart_id == chart_id;
+  });
+  var chartAllType = ChartSetting.chartLists[index].chartOptions.chartAllType;
+  var chartAllTypeArray = chartAllType.split("|");
+  var chartPro = chartAllTypeArray[0],
+      chartType = chartAllTypeArray[1],
+      chartStyle = chartAllTypeArray[2];
+
+  if (chartPro == "echarts") {
+    external_echarts_default.a.getInstanceById(jquery_default()("#" + chart_id).attr("_echarts_instance_")).resize();
+  }
+}
+
+function resizeChartAll() {
+  for (var i = 0; i < ChartSetting.chartLists.length; i++) {
+    var chartJson = ChartSetting.chartLists[i].chartOptions;
+
+    if (chartJson.chartAllType.split('|')[0] == 'echarts') {
+      external_echarts_default.a.getInstanceById(jquery_default()('#' + chartJson.chart_id).attr('_echarts_instance_')).resize();
+    }
+  }
+} // delete chart
+
+
+function deleteChart(chart_id) {
+  var index = ChartSetting.chartLists.findIndex(function (item) {
+    return item.chart_id === chart_id;
+  });
+  ChartSetting.chartLists.splice(index, 1);
+  ChartSetting.currentChartIndex--;
+
+  if (ChartSetting.currentChartIndex < 0) {
+    if (ChartSetting.chartLists[0]) {
+      ChartSetting.currentChartIndex = 0;
+      return;
+    }
+
+    ChartSetting.currentChartIndex = null;
+  }
+}
+
+function getChartJson(chart_id) {
+  var index = ChartSetting.chartLists.findIndex(function (item) {
+    return item.chart_id === chart_id;
+  });
+  return ChartSetting.chartLists[index].chartOptions;
+}
+
+function insertToStore(chart_json) {
+  ChartSetting.chartLists.push(chart_json);
+}
+
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/ChartSetting.vue?vue&type=script&lang=js&
 
 
@@ -33745,6 +33991,7 @@ var ChartAxis_component = normalizeComponent(
 
 
  // import { isEqual } from "lodash";
+
 
 
 
@@ -34125,6 +34372,11 @@ var ChartAxis_component = normalizeComponent(
         return null;
       }
 
+      if (this.chartLists[this.currentChartIndex] === undefined) {
+        deleteChart(this.currentChartIndex);
+        return null;
+      }
+
       return this.chartLists[this.currentChartIndex].chartOptions.chartDataCache; // },
       // set(val) {
       //   this.updateChartItemChartlistOne({ key: "rangeColCheck", val });
@@ -34268,7 +34520,7 @@ var ChartSettingvue_type_style_index_0_lang_scss_ = __webpack_require__("a8f2");
 
 var ChartSetting_component = normalizeComponent(
   ChartMix_ChartSettingvue_type_script_lang_js_,
-  ChartSettingvue_type_template_id_2c0e08b9_render,
+  ChartSettingvue_type_template_id_397fdf2b_render,
   staticRenderFns,
   false,
   null,
@@ -34277,7 +34529,7 @@ var ChartSetting_component = normalizeComponent(
   
 )
 
-/* harmony default export */ var ChartSetting = (ChartSetting_component.exports);
+/* harmony default export */ var ChartMix_ChartSetting = (ChartSetting_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26bab996-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/ChartRender.vue?vue&type=template&id=4be53480&scoped=true&
 var ChartRendervue_type_template_id_4be53480_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chartRender"})}
 var ChartRendervue_type_template_id_4be53480_scoped_true_staticRenderFns = []
@@ -34364,247 +34616,6 @@ var ChartRender_component = normalizeComponent(
 )
 
 /* harmony default export */ var ChartRender = (ChartRender_component.exports);
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.splice.js
-var es_array_splice = __webpack_require__("a434");
-
-// EXTERNAL MODULE: external "echarts"
-var external_echarts_ = __webpack_require__("164e");
-var external_echarts_default = /*#__PURE__*/__webpack_require__.n(external_echarts_);
-
-// CONCATENATED MODULE: ./src/utils/exportUtil.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-var exportUtil_ChartSetting = src_store.state.chartSetting; // init chart
-
-function initChart(outDom, lang) {
-  var dom = document.createElement('div');
-  dom.id = 'chartmix';
-  outDom.appendChild(dom);
-  new external_Vue_default.a({
-    el: '#chartmix',
-    store: src_store,
-    data: function data() {
-      return {
-        lang: lang
-      };
-    },
-    computed: {
-      chartOptions: function chartOptions() {
-        if (!exportUtil_ChartSetting.currentChartIndex) {
-          return null;
-        }
-
-        return exportUtil_ChartSetting.chartLists[exportUtil_ChartSetting.currentChartIndex].chartOptions;
-      }
-    },
-    template: "<ChartSetting :lang=\"lang\" :chartOptions=\"chartOptions\"></ChartSetting>"
-  });
-}
-/**
- * 
- * @param {*} render 插入图表的容器
- * @param {*} chartData 框选的数据
- * @param {*} chart_id 图表ID
- * 返回容器/id/chart_json图表配置
- */
-
-
-function createChart(render, chartData, chart_id, rangeArray, rangeTxt) {
-  var chart_Id = chart_id ? chart_id : generateRandomKey('chart');
-  render.id = chart_Id;
-  chartJson_chartOptions.defaultOption.series = []; // 随机生成图表
-
-  var ratio = Math.random() * 10;
-
-  if (ratio > 5) {
-    chartJson_chartOptions.chartAllType = 'echarts|pie|default';
-  } else {
-    chartJson_chartOptions.chartAllType = 'echarts|line|default';
-  } // 生成图表数据结构
-
-
-  var chartOption = insertNewChart(chartJson_chartOptions, chart_Id, chartJson_chartOptions.chartAllType, chartData, rangeArray, rangeTxt);
-  var renderDom = document.createElement('div');
-  renderDom.id = 'render' + chart_Id;
-  render.appendChild(renderDom);
-  var chart_json = {
-    'chart_id': chart_Id,
-    'active': true,
-    'chartOptions': deepCopy(chartOption)
-  };
-  exportUtil_ChartSetting.currentChartIndex = exportUtil_ChartSetting.chartLists.length;
-  exportUtil_ChartSetting.chartLists.push(chart_json);
-  console.dir(chart_json);
-  new external_Vue_default.a({
-    el: '#render' + chart_Id,
-    store: src_store,
-    data: function data() {
-      return {
-        chart_Id: chart_Id
-      };
-    },
-    computed: {
-      options: function options() {
-        var _this = this;
-
-        var chartJson = exportUtil_ChartSetting.chartLists.find(function (item) {
-          return item.chart_id == _this.chart_Id;
-        });
-
-        if (chartJson) {
-          return chartJson.chartOptions;
-        } else {
-          return null;
-        }
-      },
-      active: function active() {
-        var _this2 = this;
-
-        var chartJson = exportUtil_ChartSetting.chartLists.find(function (item) {
-          return item.chart_id == _this2.chart_Id;
-        });
-
-        if (chartJson) {
-          return chartJson.active;
-        } else {
-          return null;
-        }
-      }
-    },
-    template: "<ChartRender :chartOptions=\"options\" :chart_id=\"chart_Id\" :active=\"active\"></ChartRneder>"
-  });
-  return {
-    render: render,
-    chart_Id: chart_Id,
-    chart_json: chart_json
-  };
-} // insert chart
-
-
-function insertNewChart(chartOptions, chart_id, chartAllType, chartData, rangeArray, rangeTxt, chartTheme, height, width, left, top) {
-  var chart_json = {};
-  var chartAllTypeArray = chartAllType.split('|');
-  var chartPro = chartAllTypeArray[0],
-      chartType = chartAllTypeArray[1],
-      chartStyle = chartAllTypeArray[2];
-  chart_json.chart_id = chart_id;
-  chart_json.chartAllType = chartAllType;
-  chart_json.chartPro = chartPro;
-  chart_json.chartType = chartType;
-  chart_json.chartStyle = chartStyle;
-  chart_json.height = height;
-  chart_json.width = width;
-  chart_json.left = left;
-  chart_json.top = top; //按照图表类型得到图表的默认设置
-
-  var defaultOptionIni = chartOptions.defaultOption; //数据的sheet索引
-
-  chart_json.chartData = chartData;
-  chart_json.rangeArray = rangeArray;
-  chart_json.rangeTxt = rangeTxt; //根据数据集得到按钮状态，rangeColCheck表示首列是否标题，rangeRowCheck表示首行是否标题，rangeConfigCheck表示是否转置。
-
-  var rowColCheck = getRowColCheck(chartData);
-  var rangeRowCheck = rowColCheck[0],
-      rangeColCheck = rowColCheck[1],
-      rangeConfigCheck = false;
-  chart_json.rangeColCheck = rangeColCheck;
-  chart_json.rangeRowCheck = rangeRowCheck;
-  chart_json.rangeConfigCheck = rangeConfigCheck; //按照数据范围文字得到具体数据范围
-
-  var rangeSplitArray = getRangeSplitArray(chartData, rangeArray, rangeColCheck, rangeRowCheck);
-  chart_json.rangeSplitArray = rangeSplitArray; //根据数据集、功能按钮状态、图表类型，得到图表可操作的数据格式，例如：{ "x":[], "y":[], series:[] }，可以按照次格式渲染数据页中的系列和轴控件。
-  //数据为一行且为汉字的时候，chartDataCache的series为空数组
-
-  var chartDataCache = getChartDataCache(chartData, rangeSplitArray, chartPro, chartType, chartStyle);
-  chart_json.chartDataCache = chartDataCache; //生成默认的系列顺序，默认根据series数组的位置，用户可以在界面上操作更改这个位置。
-
-  var chartDataSeriesOrder = getChartDataSeriesOrder(chartDataCache.series[0].length);
-  chart_json.chartDataSeriesOrder = chartDataSeriesOrder; //设置图表皮肤
-
-  chart_json.chartTheme = chartTheme; //根据图表的默认设置、图表数据、图表系列顺序，等到一个完整的图表配置串。
-
-  var defaultOption = addDataToOption(defaultOptionIni, chartDataCache, chartDataSeriesOrder, chartPro, chartType, chartStyle); //根据图表厂商选择渲染引擎，并根据设置渲染出图表
-
-  chart_json.defaultOption = defaultOption;
-  return chart_json;
-} // highlight current chart
-
-
-function highlightChart(chart_id) {
-  var index = exportUtil_ChartSetting.chartLists.findIndex(function (item) {
-    return item.chart_id == chart_id;
-  });
-  exportUtil_ChartSetting.currentChartIndex = index;
-  return exportUtil_ChartSetting.chartLists[exportUtil_ChartSetting.currentChartIndex].chartOptions;
-} // resize chart
-
-
-function resizeChart(chart_id) {
-  var index = exportUtil_ChartSetting.chartLists.findIndex(function (item) {
-    return item.chart_id == chart_id;
-  });
-  var chartAllType = exportUtil_ChartSetting.chartLists[index].chartOptions.chartAllType;
-  var chartAllTypeArray = chartAllType.split("|");
-  var chartPro = chartAllTypeArray[0],
-      chartType = chartAllTypeArray[1],
-      chartStyle = chartAllTypeArray[2];
-
-  if (chartPro == "echarts") {
-    external_echarts_default.a.getInstanceById(jquery_default()("#" + chart_id).attr("_echarts_instance_")).resize();
-  }
-}
-
-function resizeChartAll() {
-  for (var i = 0; i < exportUtil_ChartSetting.chartLists.length; i++) {
-    var chartJson = exportUtil_ChartSetting.chartLists[i].chartOptions;
-
-    if (chartJson.chartAllType.split('|')[0] == 'echarts') {
-      external_echarts_default.a.getInstanceById(jquery_default()('#' + chartJson.chart_id).attr('_echarts_instance_')).resize();
-    }
-  }
-} // delete chart
-
-
-function deleteChart(chart_id) {
-  var index = exportUtil_ChartSetting.chartLists.findIndex(function (item) {
-    return item.chart_id == chart_id;
-  });
-  exportUtil_ChartSetting.chartLists.splice(index, 1);
-  exportUtil_ChartSetting.currentChartIndex--;
-
-  if (exportUtil_ChartSetting.currentChartIndex < 0) {
-    if (exportUtil_ChartSetting.chartLists[0]) {
-      exportUtil_ChartSetting.currentChartIndex = 0;
-      return;
-    }
-
-    exportUtil_ChartSetting.currentChartIndex = null;
-  }
-}
-
-function getChartJson(chart_id) {
-  var index = exportUtil_ChartSetting.chartLists.findIndex(function (item) {
-    return item.chart_id == chart_id;
-  });
-  return exportUtil_ChartSetting.chartLists[index].chartOptions;
-}
-
-function insertToStore(chart_json) {
-  exportUtil_ChartSetting.chartLists.push(chart_json);
-}
-
-
 // CONCATENATED MODULE: ./src/packages/index.js
 
 
@@ -34615,7 +34626,7 @@ function insertToStore(chart_json) {
 
  // all components
 
-var components = [ChartSetting, ChartRender];
+var components = [ChartMix_ChartSetting, ChartRender];
 /**
  * define install function
  *

@@ -1701,73 +1701,6 @@ body:not(.ewa-ipad) .luckysheet-rows-h-cell-sel:hover {
     border-width: 0 1px 0 0
 }
 
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:increment {
-    background: no-repeat url("waffle_sprite.png") -663px -13px;
-    width: 15px;
-    padding-left: 1px;
-    background-clip: border-box;
-    border: 1px solid #d9d9d9;
-    border-width: 1px 0 0 0;
-    box-shadow: none;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #d9d9d9;
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:increment:hover {
-    background: no-repeat url("waffle_sprite.png") -395px -62px
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:increment:active {
-    background: no-repeat url("waffle_sprite.png") -679px -13px
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:decrement {
-    border-left: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
-    background: no-repeat url("waffle_sprite.png") -283px -62px;
-    width: 17px;
-    border-bottom: 1px solid #d9d9d9;
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:hover {
-    background: no-repeat url("waffle_sprite.png") -145px -70px
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:active {
-    background: no-repeat url("waffle_sprite.png") -552px 0
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:increment {
-    padding-top: 1px;
-    background: no-repeat url("waffle_sprite.png") -531px -24px;
-    border-left: 1px solid #d9d9d9;
-    height: 15px
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:increment:hover {
-    background: no-repeat url("waffle_sprite.png") -570px -42px
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:increment:active {
-    background: no-repeat url("waffle_sprite.png") -83px -46px
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:decrement {
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
-    border-left: 1px solid #d9d9d9;
-    background: no-repeat url("waffle_sprite.png") -631px -27px;
-    height: 17px
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:decrement:hover {
-    background: no-repeat url("waffle_sprite.png") -180px -58px
-}
-
-.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:decrement:active {
-    background: no-repeat url("waffle_sprite.png") -776px -28px
-}
-
 .luckysheet-scrollbar-x {
     bottom: 0px;
     left: 44px;
@@ -5627,18 +5560,6 @@ fieldset[disabled] .btn-danger.focus {
     height: 30px;
 }
 
-#luckysheet-icon-dataBar-menuButton .bgImgBox {
-    width: 28px;
-    height: 26px;
-    background: url(../plugins/images/CFdataBar.png)no-repeat;
-}
-
-#luckysheet-icon-colorGradation-menuButton .bgImgBox {
-    width: 28px;
-    height: 26px;
-    background: url(../plugins/images/CFcolorGradation.png)no-repeat;
-}
-
 /*条件格式规则管理器*/
 #luckysheet-administerRule-dialog {
     font-size: 12px;
@@ -5923,13 +5844,6 @@ fieldset[disabled] .btn-danger.focus {
     background-color: #dfdfdf;
 }
 
-.luckysheet-newEditorRule-dialog .iconsBox ul li div {
-    width: 125px;
-    height: 20px;
-    background: url(../plugins/images/CFicons.png)no-repeat;
-    background-size: 256px;
-}
-
 /*条件格式 图标集弹框*/
 #luckysheet-CFicons-dialog .box {
     padding: 10px;
@@ -5969,13 +5883,6 @@ fieldset[disabled] .btn-danger.focus {
 
 #luckysheet-CFicons-dialog .box .list .item:hover {
     background-color: #dfdfdf;
-}
-
-#luckysheet-CFicons-dialog .box .list .item div {
-    width: 125px;
-    height: 20px;
-    background: url(../plugins/images/CFicons.png)no-repeat;
-    background-size: 256px;
 }
 
 /*交替颜色*/

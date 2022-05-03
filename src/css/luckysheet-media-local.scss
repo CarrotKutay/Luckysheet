@@ -1,0 +1,94 @@
+﻿@import '_media';
+
+#luckysheet-CFicons-dialog .box .list .item div {
+    width: 125px;
+    height: 20px;
+    background: url($cfIcons_local)no-repeat;
+    background-size: 256px;
+}
+
+.luckysheet-newEditorRule-dialog .iconsBox ul li div {
+    width: 125px;
+    height: 20px;
+    background: url($cfIcons_local)no-repeat;
+    background-size: 256px;
+}
+
+#luckysheet-icon-dataBar-menuButton .bgImgBox {
+    width: 28px;
+    height: 26px;
+    background: url($cfDataBar_local)no-repeat;
+}
+
+#luckysheet-icon-colorGradation-menuButton .bgImgBox {
+    width: 28px;
+    height: 26px;
+    background: url($cfColorGradient_local)no-repeat;
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:increment {
+    background: no-repeat url($waffle_sprite_local) -663px -13px;
+    width: 15px;
+    padding-left: 1px;
+    background-clip: border-box;
+    border: 1px solid #d9d9d9;
+    border-width: 1px 0 0 0;
+    box-shadow: none;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:increment:hover {
+    background: no-repeat url($waffle_sprite_local) -395px -62px
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:increment:active {
+    background: no-repeat url($waffle_sprite_local) -679px -13px
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:decrement {
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    background: no-repeat url($waffle_sprite_local) -283px -62px;
+    width: 17px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:hover {
+    background: no-repeat url($waffle_sprite_local) -145px -70px
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:horizontal:active {
+    background: no-repeat url($waffle_sprite_local) -552px 0
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:increment {
+    padding-top: 1px;
+    background: no-repeat url($waffle_sprite_local) -531px -24px;
+    border-left: 1px solid #d9d9d9;
+    height: 15px
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:increment:hover {
+    background: no-repeat url($waffle_sprite_local) -570px -42px
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:increment:active {
+    background: no-repeat url($waffle_sprite_local) -83px -46px
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:decrement {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    background: no-repeat url($waffle_sprite_local) -631px -27px;
+    height: 17px
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:decrement:hover {
+    background: no-repeat url($waffle_sprite_local) -180px -58px
+}
+
+.luckysheet-scrollbar-ltr::-webkit-scrollbar-button:vertical:decrement:active {
+    background: no-repeat url($waffle_sprite_local) -776px -28px
+}

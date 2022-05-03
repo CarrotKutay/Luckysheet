@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+
 // gulp core function
 const {src, dest, series, parallel, watch} = require('gulp');
 // gulp compress js
@@ -73,7 +75,7 @@ const paths = {
     staticImages: ['src/plugins/images/*.png'],
     staticExpendPlugins: ['src/expendPlugins/**', '!src/expendPlugins/**/plugin.js'],
     staticDemoData: ['src/demoData/*.js'],
-    staticCssImages: ['src/css/**', '!src/css/*.css'],
+    staticCssImages: ['src/css/**', '!src/css/*.css', '!src/css/*.scss'],
 
     // static resources dest
     destStaticHtml: ['dist'],
@@ -90,7 +92,9 @@ const paths = {
     //plugins src
     pluginsCss: ['src/plugins/css/*.css'],
     plugins: ['src/plugins/*.css'],
-    css: ['src/css/*.css', 'node_modules/flatpickr/dist/themes/light.css'],
+    cssPath: ['src/css/'],
+    css: ['src/css/*.css', 'src/css/_media.scss', 'node_modules/flatpickr/dist/themes/light.css'],
+    sassFiles:[production ? 'src/css/luckysheet-media-production.scss' : 'src/css/luckysheet-media-local.scss'],
     pluginsJsGemaProd: [
         'node_modules/uuid/dist/umd/uuid.min.js',
         'src/plugins/js/clipboard.min.js',
@@ -264,6 +268,12 @@ function css() {
         .pipe(dest(paths.destCss));
 }
 
+function compileStyles(){
+    return src(paths.sassFiles)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(dest(paths.cssPath));
+};
+
 function pluginsJs() {
     if (production) {
         return src(paths.pluginsJsGemaProd)
@@ -318,8 +328,8 @@ function copyStaticCssImages() {
         .pipe(dest(paths.destStaticCssImages));
 }
 
-const dev = series(clean, parallel(pluginsCss, plugins, css, pluginsJs, copyStaticHtml, copyStaticFonts, copyStaticAssets, copyStaticImages, copyStaticExpendPlugins, copyStaticDemoData, copyStaticCssImages, core), watcher, serve);
-const build = series(clean, parallel(pluginsCss, plugins, css, pluginsJs, copyStaticHtml, copyStaticFonts, copyStaticAssets, copyStaticImages, copyStaticExpendPlugins, copyStaticDemoData, copyStaticCssImages, core));
+const dev = series(clean, compileStyles, parallel(pluginsCss, plugins, css, pluginsJs, copyStaticHtml, copyStaticFonts, copyStaticAssets, copyStaticImages, copyStaticExpendPlugins, copyStaticDemoData, copyStaticCssImages, core), watcher, serve);
+const build = series(clean, compileStyles, parallel(pluginsCss, plugins, css, pluginsJs, copyStaticHtml, copyStaticFonts, copyStaticAssets, copyStaticImages, copyStaticExpendPlugins, copyStaticDemoData, copyStaticCssImages, core));
 
 exports.dev = dev;
 exports.build = build;
