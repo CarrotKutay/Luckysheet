@@ -6504,7 +6504,11 @@ fieldset[disabled] .btn-danger.focus {
 
 /*图表样式新增样式: 设置界面overflow滚动*/
 .luckysheet-datavisual-left .el-tabs__content {
-    overflow: auto;
+    overflow: scroll;
+}
+
+.el-tabs__content {
+    overflow: scroll;
 }
 
 
