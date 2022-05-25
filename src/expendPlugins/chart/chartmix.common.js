@@ -22489,12 +22489,12 @@ var es_array_map = __webpack_require__("d81d");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26bab996-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/ChartSetting.vue?vue&type=template&id=19babbf5&
-var ChartSettingvue_type_template_id_19babbf5_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chartSetting"},[_c('div',{staticStyle:{"overflow-y":"scroll","height":"100%"}},[_c('chart-list',{attrs:{"chartAllType":_vm.currentChartType,"showList":_vm.showList,"lang":_vm.lang},on:{"closeChartShowList":function($event){_vm.showList=false}}}),_c('div',{staticStyle:{"display":"flex","flex-direction":"column","overflow-y":"inherit"}},[_c('el-tabs',{attrs:{"type":"card"},on:{"tab-click":_vm.handleClick},model:{value:(_vm.activeName),callback:function ($$v) {_vm.activeName=$$v},expression:"activeName"}},[_c('el-tab-pane',{attrs:{"name":"data"}},[_c('span',{attrs:{"slot":"label"},slot:"label"},[_c('i',{staticClass:"el-icon-date"}),_vm._v(" "+_vm._s(_vm.setItem.data)+" ")]),_c('el-row',[_c('el-col',{attrs:{"span":2}},[_c('div',[_vm._v(" ")])]),_c('el-col',{attrs:{"span":22}},[_c('div',{staticStyle:{"margin-top":"1px"}},[_vm._v(_vm._s(_vm.setItem.chartType))]),_c('div',{staticStyle:{"margin-top":"10px"}},[_c('el-button',{staticStyle:{"width":"100%"},attrs:{"size":"small"},on:{"click":function($event){_vm.showList = !_vm.showList}}},[_c('i',{staticClass:"iconfont",class:_vm.chartTypeTxt[0],staticStyle:{"float":"left"}}),_vm._v(" "+_vm._s(_vm.chartTypeTxt[1])+" "),_c('i',{staticClass:"iconfont icon-jiantou",staticStyle:{"float":"right"}})])],1),_c('div',{staticStyle:{"margin-top":"25px"}}),(_vm.chartXYSeriesList)?_c('div',_vm._l((_vm.chartXYSeriesList.fix),function(item){return _c('div',{key:item.title,staticStyle:{"margin-top":"10px"}},[_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{staticStyle:{"line-height":"28px","text-align":"right"},attrs:{"span":4}},[_vm._v(_vm._s(item.title)+":")]),_c('el-col',{attrs:{"span":20}},[_c('el-tag',{staticStyle:{"width":"100%","text-align":"center"},attrs:{"size":"medium"}},[_c('i',{staticClass:"iconfont",class:item.type,staticStyle:{"float":"left"}}),_vm._v(" "+_vm._s(item.field)+" ")])],1)],1)],1)}),0):_vm._e(),_c('div',{staticStyle:{"margin-top":"25px"}}),(_vm.chartXYSeriesList)?_c('div',_vm._l((_vm.chartXYSeriesList.change),function(item,index){return _c('div',{key:index,staticStyle:{"margin-top":"10px"}},[_c('el-row',{staticStyle:{"display":"flex"},attrs:{"gutter":10}},[_c('el-col',{staticStyle:{"line-height":"28px","text-align":"right","width":"unset","flex-shrink":"1"}},[_vm._v(_vm._s(item.title)+":")]),_c('el-col',{staticStyle:{"flex-grow":"1","width":"unset"}},[_c('el-dropdown',{staticStyle:{"width":"100%"},attrs:{"size":"medium","trigger":"click"},on:{"command":_vm.handleSeriseCommand}},[_c('el-button',{staticStyle:{"width":"100%"},attrs:{"size":"mini"}},[_c('i',{staticClass:"iconfont",class:item.type,staticStyle:{"float":"left","font-size":"16px"}}),_vm._v(" "+_vm._s(item.field)+" "),_c('i',{staticClass:"iconfont icon-jiantou",staticStyle:{"float":"right"}})]),_c('el-dropdown-menu',{staticStyle:{"min-width":"306px"},attrs:{"slot":"dropdown"},slot:"dropdown"},_vm._l((_vm.chartXYSeriesList.option),function(ditem,index){return _c('el-dropdown-item',{key:("A-" + index),attrs:{"command":{series:item, option:ditem}}},[_vm._v(" "+_vm._s(ditem.field)+" "),(item.id==ditem.id)?_c('i',{staticClass:"iconfont icon-dagou",staticStyle:{"float":"right"}}):_vm._e()])}),1)],1)],1)],1)],1)}),0):_vm._e(),_c('div',{staticStyle:{"margin-top":"25px"}}),_c('el-row',[_c('div',{staticStyle:{"margin":"25px 0"}}),_c('el-checkbox',{on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeConfigCheck),callback:function ($$v) {_vm.currentRangeConfigCheck=$$v},expression:"currentRangeConfigCheck"}},[_vm._v(_vm._s(_vm.setItem.transpose))]),_c('div',{staticStyle:{"margin":"15px 0"}}),_c('el-checkbox',{attrs:{"disabled":_vm.checkRowDisabled},on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeRowCheck.exits),callback:function ($$v) {_vm.$set(_vm.currentRangeRowCheck, "exits", $$v)},expression:"currentRangeRowCheck.exits"}},[_vm._v(_vm._s(_vm.setItem.row1)+" "+_vm._s(_vm.getColRowCheckTxt(true))+" "+_vm._s(_vm.setItem.row2))]),_c('div',{staticStyle:{"margin":"15px 0"}}),_c('el-checkbox',{attrs:{"disabled":_vm.checkColDisabled},on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeColCheck.exits),callback:function ($$v) {_vm.$set(_vm.currentRangeColCheck, "exits", $$v)},expression:"currentRangeColCheck.exits"}},[_vm._v(_vm._s(_vm.setItem.column1)+" "+_vm._s(_vm.getColRowCheckTxt())+" "+_vm._s(_vm.setItem.column2))])],1)],1)],1)],1),_c('el-tab-pane',[_c('span',{attrs:{"slot":"label"},slot:"label"},[_c('i',{staticClass:"el-icon-s-data"}),_vm._v(" "+_vm._s(_vm.setItem.style)+" ")]),_c('el-row',[_c('el-col',{attrs:{"span":1}},[_c('div',[_vm._v(" ")])]),_c('el-col',{attrs:{"span":22}},[_c('el-collapse',[_c('chart-title',{attrs:{"router":'title',"chartAllType":_vm.currentChartType,"titleOption":_vm.titleOption,"lang":_vm.lang}}),_c('chart-sub-title',{attrs:{"router":'subtitle',"chartAllType":_vm.currentChartType,"subTitleOption":_vm.subTitleOption,"lang":_vm.lang}}),_c('chart-cursor',{attrs:{"router":'tooltip',"chartAllType":_vm.currentChartType,"cursorOption":_vm.cursorOption,"lang":_vm.lang}}),_c('chart-legend',{attrs:{"router":'legend',"chartAllType":_vm.currentChartType,"legendOption":_vm.legendOption,"lang":_vm.lang}}),(_vm.currentChartType.split('|')[1]!='pie')?_c('chart-axis',{attrs:{"router":'axis',"axisOption":_vm.axisOption,"chartAllType":_vm.currentChartType,"lang":_vm.lang}}):_vm._e()],1)],1),_c('el-col',{attrs:{"span":1}},[_c('div',[_vm._v(" ")])])],1)],1)],1)],1)],1)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26bab996-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/ChartSetting.vue?vue&type=template&id=13dc0b8c&
+var ChartSettingvue_type_template_id_13dc0b8c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"chartSetting"},[_c('div',{staticStyle:{"overflow-y":"scroll","height":"100%"}},[_c('chart-list',{attrs:{"chartAllType":_vm.currentChartType,"showList":_vm.showList,"lang":_vm.lang},on:{"closeChartShowList":function($event){_vm.showList=false}}}),_c('div',{staticStyle:{"display":"flex","flex-direction":"column","overflow-y":"inherit"}},[_c('el-tabs',{attrs:{"type":"card"},on:{"tab-click":_vm.handleClick},model:{value:(_vm.activeName),callback:function ($$v) {_vm.activeName=$$v},expression:"activeName"}},[_c('el-tab-pane',{attrs:{"name":"data"}},[_c('span',{attrs:{"slot":"label"},slot:"label"},[_c('i',{staticClass:"el-icon-date"}),_vm._v(" "+_vm._s(_vm.setItem.data)+" ")]),_c('el-row',[_c('el-col',{attrs:{"span":2}},[_c('div',[_vm._v(" ")])]),_c('el-col',{attrs:{"span":22}},[_c('div',{staticStyle:{"margin-top":"1px"}},[_vm._v(_vm._s(_vm.setItem.chartType))]),_c('div',{staticStyle:{"margin-top":"10px"}},[_c('el-button',{staticStyle:{"width":"100%"},attrs:{"size":"small"},on:{"click":function($event){_vm.showList = !_vm.showList}}},[_c('i',{staticClass:"iconfont",class:_vm.chartTypeTxt[0],staticStyle:{"float":"left"}}),_vm._v(" "+_vm._s(_vm.chartTypeTxt[1])+" "),_c('i',{staticClass:"iconfont icon-jiantou",staticStyle:{"float":"right"}})])],1),_c('div',{staticStyle:{"margin-top":"25px"}}),(_vm.chartXYSeriesList)?_c('div',_vm._l((_vm.chartXYSeriesList.fix),function(item){return _c('div',{key:item.title,staticStyle:{"margin-top":"10px"}},[_c('el-row',{attrs:{"gutter":10}},[_c('el-col',{staticStyle:{"line-height":"28px","text-align":"right"},attrs:{"span":4}},[_vm._v(_vm._s(item.title)+":")]),_c('el-col',{attrs:{"span":20}},[_c('el-tag',{staticStyle:{"width":"100%","text-align":"center"},attrs:{"size":"medium"}},[_c('i',{staticClass:"iconfont",class:item.type,staticStyle:{"float":"left"}}),_vm._v(" "+_vm._s(item.field)+" ")])],1)],1)],1)}),0):_vm._e(),_c('div',{staticStyle:{"margin-top":"25px"}}),(_vm.chartXYSeriesList)?_c('div',_vm._l((_vm.chartXYSeriesList.change),function(item,index){return _c('div',{key:index,staticStyle:{"margin-top":"10px"}},[_c('el-row',{staticStyle:{"display":"flex"},attrs:{"gutter":10}},[_c('el-col',{staticStyle:{"line-height":"28px","text-align":"right","width":"unset","flex-shrink":"1"}},[_vm._v(_vm._s(item.title)+":")]),_c('el-col',{staticStyle:{"flex-grow":"1","width":"unset"}},[_c('el-dropdown',{staticStyle:{"width":"100%"},attrs:{"size":"medium","trigger":"click"},on:{"command":_vm.handleSeriseCommand}},[_c('el-button',{staticStyle:{"width":"100%"},attrs:{"size":"mini"}},[_c('i',{staticClass:"iconfont",class:item.type,staticStyle:{"float":"left","font-size":"16px"}}),_vm._v(" "+_vm._s(item.field)+" "),_c('i',{staticClass:"iconfont icon-jiantou",staticStyle:{"float":"right"}})]),_c('el-dropdown-menu',{staticStyle:{"min-width":"306px"},attrs:{"slot":"dropdown"},slot:"dropdown"},_vm._l((_vm.chartXYSeriesList.option),function(ditem,index){return _c('el-dropdown-item',{key:("A-" + index),attrs:{"command":{series:item, option:ditem}}},[_vm._v(" "+_vm._s(ditem.field)+" "),(item.id===ditem.id)?_c('i',{staticClass:"iconfont icon-dagou",staticStyle:{"float":"right"}}):_vm._e()])}),1)],1)],1)],1)],1)}),0):_vm._e(),_c('div',{staticStyle:{"margin-top":"25px"}}),_c('el-row',[_c('div',{staticStyle:{"margin":"25px 0"}}),_c('el-checkbox',{on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeConfigCheck),callback:function ($$v) {_vm.currentRangeConfigCheck=$$v},expression:"currentRangeConfigCheck"}},[_vm._v(_vm._s(_vm.setItem.transpose))]),_c('div',{staticStyle:{"margin":"15px 0"}}),_c('el-checkbox',{attrs:{"disabled":_vm.checkRowDisabled},on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeRowCheck.exits),callback:function ($$v) {_vm.$set(_vm.currentRangeRowCheck, "exits", $$v)},expression:"currentRangeRowCheck.exits"}},[_vm._v(_vm._s(_vm.setItem.row1)+" "+_vm._s(_vm.getColRowCheckTxt(true))+" "+_vm._s(_vm.setItem.row2))]),_c('div',{staticStyle:{"margin":"15px 0"}}),_c('el-checkbox',{attrs:{"disabled":_vm.checkColDisabled},on:{"change":_vm.checkBoxChange},model:{value:(_vm.currentRangeColCheck.exits),callback:function ($$v) {_vm.$set(_vm.currentRangeColCheck, "exits", $$v)},expression:"currentRangeColCheck.exits"}},[_vm._v(_vm._s(_vm.setItem.column1)+" "+_vm._s(_vm.getColRowCheckTxt())+" "+_vm._s(_vm.setItem.column2))])],1)],1)],1)],1),_c('el-tab-pane',[_c('span',{attrs:{"slot":"label"},slot:"label"},[_c('i',{staticClass:"el-icon-s-data"}),_vm._v(" "+_vm._s(_vm.setItem.style)+" ")]),_c('el-row',[_c('el-col',{attrs:{"span":1}},[_c('div',[_vm._v(" ")])]),_c('el-col',{attrs:{"span":22}},[_c('el-collapse',[_c('chart-title',{attrs:{"router":'title',"chartAllType":_vm.currentChartType,"titleOption":_vm.titleOption,"lang":_vm.lang}}),_c('chart-sub-title',{attrs:{"router":'subtitle',"chartAllType":_vm.currentChartType,"subTitleOption":_vm.subTitleOption,"lang":_vm.lang}}),_c('chart-cursor',{attrs:{"router":'tooltip',"chartAllType":_vm.currentChartType,"cursorOption":_vm.cursorOption,"lang":_vm.lang}}),_c('chart-legend',{attrs:{"router":'legend',"chartAllType":_vm.currentChartType,"legendOption":_vm.legendOption,"lang":_vm.lang}}),(_vm.currentChartType.split('|')[1]!=='pie')?_c('chart-axis',{attrs:{"router":'axis',"axisOption":_vm.axisOption,"chartAllType":_vm.currentChartType,"lang":_vm.lang}}):_vm._e()],1)],1),_c('el-col',{attrs:{"span":1}},[_c('div',[_vm._v(" ")])])],1)],1)],1)],1)],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/packages/ChartMix/ChartSetting.vue?vue&type=template&id=19babbf5&
+// CONCATENATED MODULE: ./src/packages/ChartMix/ChartSetting.vue?vue&type=template&id=13dc0b8c&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
 var es_regexp_exec = __webpack_require__("ac1f");
@@ -27944,12 +27944,12 @@ var mutations_ENABLE_ACTIVE$DISABL;
   setChartOptionsByRouter(currentChartOptions, router, updateObj); //更新到子对象
 }), _defineProperty(mutations_ENABLE_ACTIVE$DISABL, UPDATE_CHART_ITEM_CHARTLIST, function (state, params) {
   var index = state.chartLists.findIndex(function (item) {
-    return item.chart_id == params.chart_id;
+    return item.chart_id === params.chart_id;
   });
   state.chartLists[index].chartOptions = jquery_default.a.extend(state.chartLists[index].chartOptions, params);
 }), _defineProperty(mutations_ENABLE_ACTIVE$DISABL, UPDATE_CHART_ITEM_CHARTLIST_ONE, function (state, params) {
   var index = state.chartLists.findIndex(function (item) {
-    return item.chart_id == params.chart_id;
+    return item.chart_id === params.chart_id;
   });
   state.chartLists[index].chartOptions[params.key] = params.value;
 }), _defineProperty(mutations_ENABLE_ACTIVE$DISABL, UPDATE_CHART_ITEM_ONE, function (state, item) {
@@ -32722,12 +32722,12 @@ var ChartSubTitle_component = normalizeComponent(
 )
 
 /* harmony default export */ var ChartSubTitle = (ChartSubTitle_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26bab996-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/chartChips/chart/ChartCursor.vue?vue&type=template&id=d9047582&
-var ChartCursorvue_type_template_id_d9047582_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-collapse-item',{attrs:{"name":"4"}},[_c('template',{slot:"title"},[_vm._v(" "+_vm._s(_vm.setItem.modalName)+" ")]),_c('chart-base-switch',{attrs:{"switchValue":_vm.cursor.show},on:{"update:switchValue":function($event){return _vm.$set(_vm.cursor, "show", $event)},"update:switch-value":function($event){return _vm.$set(_vm.cursor, "show", $event)}}},[_c('div',{attrs:{"slot":"title"},slot:"title"},[_vm._v(_vm._s(_vm.setItem.show))])]),_c('chart-base-label',{attrs:{"router":_vm.router + '/label',"baseLabelOption":_vm.cursor.label}},[_c('div',{attrs:{"slot":"title"},slot:"title"},[_vm._v(_vm._s(_vm.setItem.label))])]),_c('el-row',{staticStyle:{"margin-top":"10px"}},[_c('el-col',{attrs:{"span":6}},[_vm._v(_vm._s(_vm.setItem.background))]),_c('el-col',{attrs:{"span":3}},[_c('el-color-picker',{attrs:{"size":"mini"},model:{value:(_vm.cursor.backgroundColor),callback:function ($$v) {_vm.$set(_vm.cursor, "backgroundColor", $$v)},expression:"cursor.backgroundColor"}})],1)],1),_c('chart-base-select',{attrs:{"selectOption":_vm.triggerMethodArr,"selectValue":_vm.cursor.triggerOn},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor, "triggerOn", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor, "triggerOn", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.trigger))])]),_c('chart-base-select',{attrs:{"selectOption":_vm.triggerTypeArr,"selectValue":_vm.cursor.triggerType},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor, "triggerType", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor, "triggerType", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.type))])]),(_vm.cursor.triggerType != 'item')?_c('div',[_c('chart-base-select',{attrs:{"selectOption":_vm.lineStyleOption,"selectValue":_vm.cursor.axisPointer.style.type},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor.axisPointer.style, "type", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor.axisPointer.style, "type", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.lineType))])]),_c('chart-base-select',{attrs:{"selectOption":_vm.lineWeightOption,"selectValue":_vm.cursor.axisPointer.style.width},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor.axisPointer.style, "width", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor.axisPointer.style, "width", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.lineWidth))])]),_c('el-row',{staticStyle:{"margin-top":"15px"}},[_c('el-col',{attrs:{"span":6}},[_vm._v(_vm._s(_vm.setItem.color))]),_c('el-col',{attrs:{"span":3}},[_c('el-color-picker',{attrs:{"size":"mini"},model:{value:(_vm.cursor.axisPointer.style.color),callback:function ($$v) {_vm.$set(_vm.cursor.axisPointer.style, "color", $$v)},expression:"cursor.axisPointer.style.color"}})],1)],1),_c('chart-base-select',{attrs:{"selectOption":_vm.axisPointerArr,"selectValue":_vm.cursor.axisPointer.type},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor.axisPointer, "type", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor.axisPointer, "type", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.axisType))])])],1):_vm._e(),(_vm.cursor.triggerType == 'item')?_c('chart-base-select',{attrs:{"selectOption":_vm.posOption,"selectValue":_vm.cursor.position},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor, "position", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor, "position", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.position))])]):_vm._e()],2)}
-var ChartCursorvue_type_template_id_d9047582_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"26bab996-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/chartChips/chart/ChartCursor.vue?vue&type=template&id=6a4f291f&
+var ChartCursorvue_type_template_id_6a4f291f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('el-collapse-item',{attrs:{"name":"4"}},[_c('template',{slot:"title"},[_vm._v(" "+_vm._s(_vm.setItem.modalName)+" ")]),_c('chart-base-switch',{attrs:{"switchValue":_vm.cursor.show},on:{"update:switchValue":function($event){return _vm.$set(_vm.cursor, "show", $event)},"update:switch-value":function($event){return _vm.$set(_vm.cursor, "show", $event)}}},[_c('div',{attrs:{"slot":"title"},slot:"title"},[_vm._v(_vm._s(_vm.setItem.show))])]),_c('chart-base-label',{attrs:{"router":_vm.router + '/label',"baseLabelOption":_vm.cursor.label}},[_c('div',{attrs:{"slot":"title"},slot:"title"},[_vm._v(_vm._s(_vm.setItem.label))])]),_c('el-row',{staticStyle:{"margin-top":"10px"}},[_c('el-col',{attrs:{"span":6}},[_vm._v(_vm._s(_vm.setItem.background))]),_c('el-col',{attrs:{"span":3}},[_c('el-color-picker',{attrs:{"size":"mini"},model:{value:(_vm.cursor.backgroundColor),callback:function ($$v) {_vm.$set(_vm.cursor, "backgroundColor", $$v)},expression:"cursor.backgroundColor"}})],1)],1),_c('chart-base-select',{attrs:{"selectOption":_vm.triggerMethodArr,"selectValue":_vm.cursor.triggerOn},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor, "triggerOn", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor, "triggerOn", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.trigger))])]),_c('chart-base-select',{attrs:{"selectOption":_vm.triggerTypeArr,"selectValue":_vm.cursor.triggerType},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor, "triggerType", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor, "triggerType", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.type))])]),(_vm.cursor.triggerType != 'item')?_c('div',[_c('chart-base-select',{attrs:{"selectOption":_vm.lineStyleOption,"selectValue":_vm.cursor.axisPointer.style.type},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor.axisPointer.style, "type", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor.axisPointer.style, "type", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.lineType))])]),_c('chart-base-select',{attrs:{"selectOption":_vm.lineWeightOption,"selectValue":_vm.cursor.axisPointer.style.width},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor.axisPointer.style, "width", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor.axisPointer.style, "width", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.lineWidth))])]),_c('el-row',{staticStyle:{"margin-top":"15px"}},[_c('el-col',{attrs:{"span":6}},[_vm._v(_vm._s(_vm.setItem.color))]),_c('el-col',{attrs:{"span":3}},[_c('el-color-picker',{attrs:{"size":"mini"},model:{value:(_vm.cursor.axisPointer.style.color),callback:function ($$v) {_vm.$set(_vm.cursor.axisPointer.style, "color", $$v)},expression:"cursor.axisPointer.style.color"}})],1)],1),_c('chart-base-select',{attrs:{"selectOption":_vm.axisPointerArr,"selectValue":_vm.cursor.axisPointer.type},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor.axisPointer, "type", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor.axisPointer, "type", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.axisType))])])],1):_vm._e(),(_vm.cursor.triggerType == 'item')?_c('chart-base-select',{attrs:{"selectOption":_vm.posOption,"selectValue":_vm.cursor.position},on:{"update:selectValue":function($event){return _vm.$set(_vm.cursor, "position", $event)},"update:select-value":function($event){return _vm.$set(_vm.cursor, "position", $event)}}},[_c('div',{attrs:{"slot":"select"},slot:"select"},[_vm._v(_vm._s(_vm.setItem.position))])]):_vm._e()],2)}
+var ChartCursorvue_type_template_id_6a4f291f_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/packages/ChartMix/chartChips/chart/ChartCursor.vue?vue&type=template&id=d9047582&
+// CONCATENATED MODULE: ./src/packages/ChartMix/chartChips/chart/ChartCursor.vue?vue&type=template&id=6a4f291f&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/packages/ChartMix/chartChips/chart/ChartCursor.vue?vue&type=script&lang=js&
 
@@ -32851,7 +32851,7 @@ var ChartCursorvue_type_template_id_d9047582_staticRenderFns = []
     return {
       cursor: {},
       //courser settings
-      fontSizeOption: i18n.t('fontSIzeOption'),
+      fontSizeOption: i18n.t('fontSizeOption'),
       lineStyleOption: i18n.t('lineStyleOption'),
       lineWeightOption: i18n.t('lineWeightOption'),
       posOption: i18n.t('posOption'),
@@ -32923,8 +32923,8 @@ var ChartCursorvue_type_template_id_d9047582_staticRenderFns = []
 
 var ChartCursor_component = normalizeComponent(
   chart_ChartCursorvue_type_script_lang_js_,
-  ChartCursorvue_type_template_id_d9047582_render,
-  ChartCursorvue_type_template_id_d9047582_staticRenderFns,
+  ChartCursorvue_type_template_id_6a4f291f_render,
+  ChartCursorvue_type_template_id_6a4f291f_staticRenderFns,
   false,
   null,
   null,
@@ -33606,7 +33606,7 @@ function createChart(render, chartData, chart_id, rangeArray, rangeTxt) {
         var _this = this;
 
         var chartJson = ChartSetting.chartLists.find(function (item) {
-          return item.chart_id == _this.chart_Id;
+          return item.chart_id === _this.chart_Id;
         });
 
         if (chartJson) {
@@ -33619,7 +33619,7 @@ function createChart(render, chartData, chart_id, rangeArray, rangeTxt) {
         var _this2 = this;
 
         var chartJson = ChartSetting.chartLists.find(function (item) {
-          return item.chart_id == _this2.chart_Id;
+          return item.chart_id === _this2.chart_Id;
         });
 
         if (chartJson) {
@@ -33629,7 +33629,7 @@ function createChart(render, chartData, chart_id, rangeArray, rangeTxt) {
         }
       }
     },
-    template: "<ChartRender :chartOptions=\"options\" :chart_id=\"chart_Id\" :active=\"active\"></ChartRneder>"
+    template: "<ChartRender :chartOptions=\"options\" :chart_id=\"chart_Id\" :active=\"active\"></ChartRender>"
   });
   return {
     render: render,
@@ -33652,8 +33652,8 @@ function insertNewChart(chartOptions, chart_id, chartAllType, chartData, rangeAr
   chart_json.chartStyle = chartStyle;
   chart_json.height = height;
   chart_json.width = width;
-  chart_json.left = left;
-  chart_json.top = top; //按照图表类型得到图表的默认设置
+  chart_json.left = left ? left : chartOptions.left;
+  chart_json.top = top ? top : chartOptions.top; //按照图表类型得到图表的默认设置
 
   var defaultOptionIni = chartOptions.defaultOption; //数据的sheet索引
 
@@ -33690,7 +33690,7 @@ function insertNewChart(chartOptions, chart_id, chartAllType, chartData, rangeAr
 
 function highlightChart(chart_id) {
   var index = ChartSetting.chartLists.findIndex(function (item) {
-    return item.chart_id == chart_id;
+    return item.chart_id === chart_id;
   });
   ChartSetting.currentChartIndex = index;
   return ChartSetting.chartLists[ChartSetting.currentChartIndex].chartOptions;
@@ -33699,7 +33699,7 @@ function highlightChart(chart_id) {
 
 function resizeChart(chart_id) {
   var index = ChartSetting.chartLists.findIndex(function (item) {
-    return item.chart_id == chart_id;
+    return item.chart_id === chart_id;
   });
   var chartAllType = ChartSetting.chartLists[index].chartOptions.chartAllType;
   var chartAllTypeArray = chartAllType.split("|");
@@ -33707,7 +33707,7 @@ function resizeChart(chart_id) {
       chartType = chartAllTypeArray[1],
       chartStyle = chartAllTypeArray[2];
 
-  if (chartPro == "echarts") {
+  if (chartPro === "echarts") {
     external_echarts_default.a.getInstanceById(jquery_default()("#" + chart_id).attr("_echarts_instance_")).resize();
   }
 }
@@ -33716,7 +33716,7 @@ function resizeChartAll() {
   for (var i = 0; i < ChartSetting.chartLists.length; i++) {
     var chartJson = ChartSetting.chartLists[i].chartOptions;
 
-    if (chartJson.chartAllType.split('|')[0] == 'echarts') {
+    if (chartJson.chartAllType.split('|')[0] === 'echarts') {
       external_echarts_default.a.getInstanceById(jquery_default()('#' + chartJson.chart_id).attr('_echarts_instance_')).resize();
     }
   }
@@ -33957,11 +33957,6 @@ function insertToStore(chart_json) {
 //
 //
 //
- // const ChartTitle = () => import("./chartChips/chart/ChartTitle");
-// const ChartSubTitle = () => import("./chartChips/chart/ChartSubTitle");
-// const ChartCursor = () => import("./chartChips/chart/ChartCursor");
-// const ChartLegend = () => import("./chartChips/chart/ChartLegend");
-// const ChartAxis = () => import("./chartChips/chart/ChartAxis");
 
 
  // import { isEqual } from "lodash";
@@ -34029,7 +34024,7 @@ function insertToStore(chart_json) {
     chartOptions: {
       handler: function handler(chartOption, oldV) {
         //此处必须使用function,不能用箭头函数
-        if (chartOption == undefined || !chartOption.hasOwnProperty("chartAllType")) {
+        if (chartOption === undefined || !chartOption.hasOwnProperty("chartAllType")) {
           return;
         }
 
@@ -34040,6 +34035,8 @@ function insertToStore(chart_json) {
         this.cursorOption = chartOption.defaultOption.tooltip;
         this.legendOption = chartOption.defaultOption.legend;
         this.axisOption = chartOption.defaultOption.axis;
+        this.top = chartOption.top;
+        this.left = chartOption.left;
       }
     },
     lang: function lang() {
@@ -34086,18 +34083,10 @@ function insertToStore(chart_json) {
       }
     },
     checkRowDisabled: function checkRowDisabled() {
-      if (this.currentChartIndex == null || !this.chartLists[this.currentChartIndex].chartOptions.chartData || this.chartLists[this.currentChartIndex].chartOptions.chartData.length == 1) {
-        return true;
-      }
-
-      return false;
+      return this.currentChartIndex == null || !this.chartLists[this.currentChartIndex].chartOptions.chartData || this.chartLists[this.currentChartIndex].chartOptions.chartData.length === 1;
     },
     checkColDisabled: function checkColDisabled() {
-      if (this.currentChartIndex == null || !this.chartLists[this.currentChartIndex].chartOptions.chartData || this.chartLists[this.currentChartIndex].chartOptions.chartData.length == 1) {
-        return true;
-      }
-
-      return false;
+      return this.currentChartIndex == null || !this.chartLists[this.currentChartIndex].chartOptions.chartData || this.chartLists[this.currentChartIndex].chartOptions.chartData.length === 1;
     },
     currentRangeConfigCheck: {
       get: function get() {
@@ -34128,137 +34117,137 @@ function insertToStore(chart_json) {
     chartTypeTxt: function chartTypeTxt() {
       var head, main, icon;
 
-      if (this.chart_pro == "echarts") {
+      if (this.chart_pro === "echarts") {
         head = "echarts";
-      } else if (this.chart_pro == "highcharts") {
+      } else if (this.chart_pro === "highcharts") {
         head = "highcharts";
       }
 
-      if (this.chart_type == "line") {
-        if (this.chart_style == "default") {
+      if (this.chart_type === "line") {
+        if (this.chart_style === "default") {
           main = this.setItem.echarts.line.default;
         }
 
-        if (this.chart_style == "smooth") {
+        if (this.chart_style === "smooth") {
           main = this.setItem.echarts.line.smooth;
         }
 
-        if (this.chart_style == "label") {
+        if (this.chart_style === "label") {
           main = this.setItem.echarts.line.label;
         }
 
-        if (this.chart_style == "doublex") {
+        if (this.chart_style === "doublex") {
           main = "双Y轴折线图";
         }
 
-        if (this.chart_style == "linemix") {
+        if (this.chart_style === "linemix") {
           main = "折线柱状混合图";
         }
 
         icon = "icon-tubiaozhexiantu";
         return [icon, head + " - " + main];
-      } else if (this.chart_type == "area") {
-        if (this.chart_style == "default") {
+      } else if (this.chart_type === "area") {
+        if (this.chart_style === "default") {
           main = this.setItem.echarts.area.default;
         }
 
-        if (this.chart_style == "stack") {
+        if (this.chart_style === "stack") {
           main = this.setItem.echarts.area.stack;
         }
 
-        if (this.chart_style == "stackRatio") {
+        if (this.chart_style === "stackRatio") {
           main = "带标签的堆叠面积图";
         }
 
         icon = "icon-fsux_tubiao_duijimianjitu";
         return [icon, head + " - " + main];
-      } else if (this.chart_type == "column") {
-        if (this.chart_style == "default") {
+      } else if (this.chart_type === "column") {
+        if (this.chart_style === "default") {
           main = this.setItem.echarts.column.default;
         }
 
-        if (this.chart_style == "stack") {
+        if (this.chart_style === "stack") {
           main = this.setItem.echarts.column.stack;
         }
 
-        if (this.chart_style == "stackRatio") {
+        if (this.chart_style === "stackRatio") {
           main = "百分比堆叠柱状图";
         }
 
-        if (this.chart_style == "costComposition") {
+        if (this.chart_style === "costComposition") {
           main = "费用构成柱状图";
         }
 
-        if (this.chart_style == "polarStack") {
+        if (this.chart_style === "polarStack") {
           main = "极坐标系下的堆叠柱状图";
         }
 
-        if (this.chart_style == "bar3DPunchCard") {
+        if (this.chart_style === "bar3DPunchCard") {
           main = "3D柱状图";
         }
 
-        if (this.chart_style == "contain") {
+        if (this.chart_style === "contain") {
           main = "比例图";
         }
 
-        if (this.chart_style == "special") {
+        if (this.chart_style === "special") {
           main = "显示百分比图";
         }
 
-        if (this.chart_style == "doubleX") {
+        if (this.chart_style === "doubleX") {
           main = "双X轴";
         }
 
         icon = "icon-chart";
         return [icon, head + " - " + main];
-      } else if (this.chart_type == "bar") {
-        if (this.chart_style == "default") {
+      } else if (this.chart_type === "bar") {
+        if (this.chart_style === "default") {
           main = this.setItem.echarts.bar.default;
         }
 
-        if (this.chart_style == "stack") {
+        if (this.chart_style === "stack") {
           main = this.setItem.echarts.bar.stack;
         }
 
-        if (this.chart_style == "stackRatio") {
+        if (this.chart_style === "stackRatio") {
           main = "百分比堆叠条形图";
         }
 
-        if (this.chart_style == "compare") {
+        if (this.chart_style === "compare") {
           main = "条形比较图";
         }
 
-        if (this.chart_style == "contain") {
+        if (this.chart_style === "contain") {
           main = "比例图";
         }
 
         icon = "icon-fsux_tubiao_duijizhuzhuangtu1";
         return [icon, head + " - " + main];
-      } else if (this.chart_type == "pie") {
-        if (this.chart_style == "default") {
+      } else if (this.chart_type === "pie") {
+        if (this.chart_style === "default") {
           main = this.setItem.echarts.pie.default;
         }
 
-        if (this.chart_style == "split") {
+        if (this.chart_style === "split") {
           main = this.setItem.echarts.pie.split;
         }
 
-        if (this.chart_style == "ring") {
+        if (this.chart_style === "ring") {
           main = this.setItem.echarts.pie.ring;
         }
 
-        if (this.chart_style == "ringnest") {
+        if (this.chart_style === "ringnest") {
           main = "环形嵌套图";
         }
 
-        if (this.chart_style == "3D") {
+        if (this.chart_style === "3D") {
           main = "3D饼图";
         }
 
-        if (this.chart_style == "rose") {
-          if (this.chart_pro == "echarts") {
+        if (this.chart_style === "rose") {
+          if (this.chart_pro === "echarts") {
             main = "南丁格玫瑰图";
-          } else if (this.chart_pro == "highcharts") {
+          } else if (this.chart_pro === "highcharts") {
             main = "可变宽度的环形图";
           }
         }
@@ -34267,20 +34256,20 @@ function insertToStore(chart_json) {
         return [icon, head + " - " + main];
       }
 
-      if (this.chart_type == "scatter") {
-        if (this.chart_style == "default") {
+      if (this.chart_type === "scatter") {
+        if (this.chart_style === "default") {
           main = "默认散点图";
         }
 
-        if (this.chart_style == "label") {
+        if (this.chart_style === "label") {
           main = "带标签的散点图";
         }
 
-        if (this.chart_style == "zoom") {
+        if (this.chart_style === "zoom") {
           main = "自由缩放散点图";
         }
 
-        if (this.chart_style == "matrix") {
+        if (this.chart_style === "matrix") {
           main = "散点图矩阵";
         }
 
@@ -34288,56 +34277,58 @@ function insertToStore(chart_json) {
         return [icon, head + " - " + main];
       }
 
-      if (this.chart_type == "radar") {
-        if (this.chart_style == "default") {
+      if (this.chart_type === "radar") {
+        if (this.chart_style === "default") {
           main = "默认雷达图";
         }
 
         icon = "icon-leidatu";
         return [icon, head + " - " + main];
-      } else if (this.chart_type == "funnel") {
-        if (this.chart_style == "default") {
+      } else if (this.chart_type === "funnel") {
+        if (this.chart_style === "default") {
           main = "默认漏斗图";
         }
 
-        if (this.chart_style == "inverse") {
+        if (this.chart_style === "inverse") {
           main = "逆漏斗图";
         }
 
         icon = "icon-fsux_tubiao_loudoutu";
         return [icon, head + " - " + main];
-      } else if (this.chart_type == "gauge") {
-        if (this.chart_style == "default") {
+      } else if (this.chart_type === "gauge") {
+        if (this.chart_style === "default") {
           main = "仪表盘";
         }
 
-        if (this.chart_style == "percent") {
+        if (this.chart_style === "percent") {
           main = "百分比仪表盘";
         }
 
-        if (this.chart_style == "solid") {
+        if (this.chart_style === "solid") {
           main = "活动图";
         }
 
         icon = "icon-fsux_tubiao_yibiaopan";
         return [icon, head + " - " + main];
-      } else if (this.chart_type == "map") {
-        if (this.chart_style == "china") {
+      } else if (this.chart_type === "map") {
+        if (this.chart_style === "china") {
           main = "中国地图";
-        } else if (this.chart_style == "province") {
+        } else if (this.chart_style === "province") {
           main = "省份地图";
-        } else if (this.chart_style == "cnscatter") {
+        } else if (this.chart_style === "cnscatter") {
           main = "中国地图散点图";
-        } else if (this.chart_style == "pvscatter") {
+        } else if (this.chart_style === "pvscatter") {
           main = "省份地图散点图";
-        } else if (this.chart_style == "percent") {
+        } else if (this.chart_style === "percent") {
           main = "百分比地图";
         }
 
         icon = "icon-fsux_tubiao_ditu";
         return [icon, head + " - " + main];
-      } else if (this.chart_type == "earth") {
+      } else if (this.chart_type === "earth") {
         return [icon, head + " - " + "3D 地球"];
+      } else {
+        return [icon, head + " - " + main];
       }
     },
     currentChartDataCache: function currentChartDataCache() {
@@ -34377,7 +34368,7 @@ function insertToStore(chart_json) {
         option: []
       };
 
-      if (chartType == "line" || chartType == "column" || chartType == "area" || chartType == "scatter") {
+      if (chartType === "line" || chartType === "column" || chartType === "area" || chartType === "scatter") {
         if (this.currentChartDataCache.title != null) {
           ret.fix.push({
             title: i18n.t('chartSetting.axis.x'),
@@ -34426,7 +34417,7 @@ function insertToStore(chart_json) {
   }),
   methods: _objectSpread2(_objectSpread2({}, Object(external_Vuex_["mapActions"])("chartSetting", ["updateChartItemChartlistOne"])), {}, {
     handleClick: function handleClick(tab) {
-      if (tab.index != 0) {
+      if (tab.index !== 0) {
         this.showList = false;
       }
     },
@@ -34435,7 +34426,7 @@ function insertToStore(chart_json) {
       if (!isRow) {
         var txt = "";
 
-        if (this.currentRangeColCheck.range[0] == this.currentRangeColCheck.range[1]) {
+        if (this.currentRangeColCheck.range[0] === this.currentRangeColCheck.range[1]) {
           txt = this.currentRangeColCheck.range[0] + 1;
         } else {
           txt = this.currentRangeColCheck.range[0] + 1 + "至" + (this.currentRangeColCheck.range[1] + 1) + "";
@@ -34443,15 +34434,15 @@ function insertToStore(chart_json) {
 
         return txt;
       } else {
-        var txt = "";
+        var _txt = "";
 
-        if (this.currentRangeRowCheck.range[0] == this.currentRangeRowCheck.range[1]) {
-          txt = this.currentRangeRowCheck.range[0] + 1;
+        if (this.currentRangeRowCheck.range[0] === this.currentRangeRowCheck.range[1]) {
+          _txt = this.currentRangeRowCheck.range[0] + 1;
         } else {
-          txt = this.currentRangeRowCheck.range[0] + 1 + "至" + (this.currentRangeRowCheck.range[1] + 1) + "";
+          _txt = this.currentRangeRowCheck.range[0] + 1 + "至" + (this.currentRangeRowCheck.range[1] + 1) + "";
         }
 
-        return txt;
+        return _txt;
       }
     },
     // 转置行列操作
@@ -34494,7 +34485,7 @@ var ChartSettingvue_type_style_index_0_lang_scss_ = __webpack_require__("a8f2");
 
 var ChartSetting_component = normalizeComponent(
   ChartMix_ChartSettingvue_type_script_lang_js_,
-  ChartSettingvue_type_template_id_19babbf5_render,
+  ChartSettingvue_type_template_id_13dc0b8c_render,
   staticRenderFns,
   false,
   null,

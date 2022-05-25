@@ -159,7 +159,7 @@ function renderCharts(chartLists, isDemo) {
             replaceHtml(modelChartShowHTML, {
                 id: chart_id_c,
                 addclass: 'luckysheet-data-visualization-chart',
-                title: '图表生成',
+                title: 'Chart generation',
                 update: locale().chart.edit,
                 maximize: locale().chart.maximize,
                 delete: locale().chart.delete,
@@ -302,14 +302,17 @@ function renderCharts(chartLists, isDemo) {
 
         let width = chart.width
         let height = chart.height
-        let left = chart.left
-        let top = chart.top
+        let left = chart.left ? chart.left : '0px';
+        let top = chart.top ? chart.top : '0px';
+
+        console.log('position check \n', 'top: ', top, ' left: ', left)
+
         container.style.width = width + 'px'
         container.style.height = height + 'px'
         container.style.position = 'absolute'
         container.style.background = '#fff'
-        container.style.left = left + 'px'
-        container.style.top = top + 'px'
+        container.style.left = left
+        container.style.top = top
         container.style.zIndex = chartInfo.zIndex ? chartInfo.zIndex : 15
         chartInfo.zIndex++
 
@@ -1098,12 +1101,15 @@ function chart_selection() {
 
 // create chart
 function createLuckyChart(width, height, left, top) {
-    //如果只选中一个单元格，则自动填充选取
-    var jfgird_select_save = luckysheet.getluckysheet_select_save();
+    let c;
+    let r;
+    let value;
+//如果只选中一个单元格，则自动填充选取
+    let jfgird_select_save = luckysheet.getluckysheet_select_save();
     if (
-        jfgird_select_save.length == 1 &&
-        jfgird_select_save[0].row[0] == jfgird_select_save[0].row[1] &&
-        jfgird_select_save[0].column[0] == jfgird_select_save[0].column[1]
+        jfgird_select_save.length === 1 &&
+        jfgird_select_save[0].row[0] === jfgird_select_save[0].row[1] &&
+        jfgird_select_save[0].column[0] === jfgird_select_save[0].column[1]
     ) {
         luckysheetMoveHighlightRange2("right", "rangeOfSelect");
 
@@ -1112,21 +1118,21 @@ function createLuckyChart(width, height, left, top) {
         jfgird_select_save = luckysheet.getluckysheet_select_save();
     }
     //处理右边的空白单元格，自动略过并修改选区 ---------------start
-    var shiftpositon_row = -1;
+    let shiftpositon_row = -1;
 
-    var row_ed =
+    const row_ed =
         jfgird_select_save[0]["row"][1] - jfgird_select_save[0]["row"][0];
     for (
-        var r = jfgird_select_save[0]["row"][0];
+        r = jfgird_select_save[0]["row"][0];
         r <= jfgird_select_save[0]["row"][1];
         r++
     ) {
         for (
-            var c = jfgird_select_save[0]["column"][0];
+            c = jfgird_select_save[0]["column"][0];
             c <= jfgird_select_save[0]["column"][1];
             c++
         ) {
-            var value = getcellvalue(r, c, luckysheet.flowdata());
+            value = getcellvalue(r, c, luckysheet.flowdata());
             //console.log("value,r,c",value,r,c);
             if (value != null && value.toString().length > 0) {
                 shiftpositon_row = r;
@@ -1139,7 +1145,7 @@ function createLuckyChart(width, height, left, top) {
         }
     }
 
-    if (shiftpositon_row == -1) {
+    if (shiftpositon_row === -1) {
         shiftpositon_row = 0;
     }
 
@@ -1151,20 +1157,20 @@ function createLuckyChart(width, height, left, top) {
     luckysheetMoveEndCell("down", "range", false, row_ed);
     jfgird_select_save = luckysheet.getluckysheet_select_save();
 
-    var shiftpositon_col = -1;
-    var column_ed =
+    let shiftpositon_col = -1;
+    const column_ed =
         jfgird_select_save[0]["column"][1] - jfgird_select_save[0]["column"][0];
     for (
-        var c = jfgird_select_save[0]["column"][0];
+        c = jfgird_select_save[0]["column"][0];
         c <= jfgird_select_save[0]["column"][1];
         c++
     ) {
         for (
-            var r = jfgird_select_save[0]["row"][0];
+            r = jfgird_select_save[0]["row"][0];
             r <= jfgird_select_save[0]["row"][1];
             r++
         ) {
-            var value = getcellvalue(r, c, luckysheet.flowdata());
+            value = getcellvalue(r, c, luckysheet.flowdata());
             if (value != null && value.toString().length > 0) {
                 shiftpositon_col = c;
                 break;
@@ -1176,7 +1182,7 @@ function createLuckyChart(width, height, left, top) {
         }
     }
 
-    if (shiftpositon_col == -1) {
+    if (shiftpositon_col === -1) {
         shiftpositon_col = 0;
     }
 
@@ -1219,7 +1225,6 @@ function createLuckyChart(width, height, left, top) {
 
     let { render, chart_json } = chartInfo.createChart($(`#${chart_id_c}`).children('.luckysheet-modal-dialog-content')[0], chartData, chart_id, rangeArray, rangeTxt)
     chartInfo.currentChart = chart_json.chartOptions
-    /*console.dir(JSON.stringify(chart_json))*/
 
     width = width ? width : 400
     height = height ? height : 250
@@ -1242,13 +1247,16 @@ function createLuckyChart(width, height, left, top) {
     if (!sheetFile.chart) {
         sheetFile.chart = [];
     }
+
+    console.log('top: ', top, '\nleft: ', left)
     sheetFile.chart.push({
         chart_id,
         width,
         height,
         left,
         top,
-        sheetIndex: sheetFile.index
+        sheetIndex: sheetFile.index,
+        chartOptions: chartInfo.currentChart
     })
 
     //处理区域高亮框参数，当前页中，只有当前的图表的needRangShow为true,其他为false
