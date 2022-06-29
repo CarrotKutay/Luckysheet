@@ -3444,14 +3444,11 @@ const conditionformat = {
                                     }
                                     //符合条件
                                     if(conditionName == "greaterThan" && Number(cell.v) > Number(conditionValue0)){
-                                        console.log('met condition greater than: ', cell.v, ' > ', conditionValue0)
                                         if((r + "_" + c) in computeMap){
-                                            console.log('condition style already exists')
                                             computeMap[r + "_" + c]["textColor"] = textColor;
                                             computeMap[r + "_" + c]["cellColor"] = cellColor;
                                         }
                                         else{
-                                            console.log('condition style added')
                                             computeMap[r + "_" + c] = { "textColor": textColor, "cellColor": cellColor };
                                         }
                                     }
