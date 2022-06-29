@@ -147,7 +147,7 @@ const server = {
 	    // TODO 配置自定义方式同步图片
         const customImageUpdateMethodConfig = luckysheetConfigsetting.imageUpdateMethodConfig
 		if (JSON.stringify(customImageUpdateMethodConfig) !== "{}") {
-            if ("images" != d.k) {
+            if ("images" !== d.k) {
                 let msg = pako.gzip(encodeURIComponent(JSON.stringify(d)), {to: "string"});
 
                 if (_this.websocket != null) {
@@ -1188,7 +1188,7 @@ const server = {
                         imageRequestLast = dayjs();
                     }
                     else{
-                        $("#luckysheet_info_detail_save").html("<span style='color:#ff2121'>网络不稳定</span>");
+                        $("#luckysheet_info_detail_save").html("<span style='color:#ff2121'>Unstable network</span>");
                     }
                     _this.imageRequestLock =true;
                 });

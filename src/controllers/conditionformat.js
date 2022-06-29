@@ -3429,7 +3429,7 @@ const conditionformat = {
 
                     for(let s = 0; s < cellrange.length; s++){
                         //条件类型判断
-                        if(conditionName == "greaterThan" || conditionName == "lessThan" || conditionName == "equal" || conditionName == "textContains"){
+                        if(conditionName === "greaterThan" || conditionName === "lessThan" || conditionName === "equal" || conditionName === "textContains"){
                             //循环应用范围计算
                             for(let r = cellrange[s].row[0]; r <= cellrange[s].row[1]; r++){
                                 for(let c = cellrange[s].column[0]; c <= cellrange[s].column[1]; c++){
@@ -3439,13 +3439,23 @@ const conditionformat = {
 
                                     //单元格值
                                     let cell = d[r][c];
-
                                     if(getObjType(cell) != "object" || isRealNull(cell.v)){
                                         continue;
                                     }
-
                                     //符合条件
-                                    if(conditionName == "greaterThan" && cell.v > conditionValue0){
+                                    if(conditionName == "greaterThan" && Number(cell.v) > Number(conditionValue0)){
+                                        console.log('met condition greater than: ', cell.v, ' > ', conditionValue0)
+                                        if((r + "_" + c) in computeMap){
+                                            console.log('condition style already exists')
+                                            computeMap[r + "_" + c]["textColor"] = textColor;
+                                            computeMap[r + "_" + c]["cellColor"] = cellColor;
+                                        }
+                                        else{
+                                            console.log('condition style added')
+                                            computeMap[r + "_" + c] = { "textColor": textColor, "cellColor": cellColor };
+                                        }
+                                    }
+                                    else if(conditionName == "lessThan" && Number(cell.v) < Number(conditionValue0)){
                                         if((r + "_" + c) in computeMap){
                                             computeMap[r + "_" + c]["textColor"] = textColor;
                                             computeMap[r + "_" + c]["cellColor"] = cellColor;
@@ -3454,16 +3464,7 @@ const conditionformat = {
                                             computeMap[r + "_" + c] = { "textColor": textColor, "cellColor": cellColor };
                                         }
                                     }
-                                    else if(conditionName == "lessThan" && cell.v < conditionValue0){
-                                        if((r + "_" + c) in computeMap){
-                                            computeMap[r + "_" + c]["textColor"] = textColor;
-                                            computeMap[r + "_" + c]["cellColor"] = cellColor;
-                                        }
-                                        else{
-                                            computeMap[r + "_" + c] = { "textColor": textColor, "cellColor": cellColor };
-                                        }
-                                    }
-                                    else if(conditionName == "equal" && cell.v == conditionValue0){
+                                    else if(conditionName == "equal" && Number(cell.v) === Number(conditionValue0)){
                                         if((r + "_" + c) in computeMap){
                                             computeMap[r + "_" + c]["textColor"] = textColor;
                                             computeMap[r + "_" + c]["cellColor"] = cellColor;
@@ -3487,6 +3488,8 @@ const conditionformat = {
                         else if(conditionName == "betweenness"){
                             //比较条件值1和条件值2的大小
                             let vBig, vSmall;
+                            conditionValue0 = Number(conditionValue0);
+                            conditionValue1 = Number(conditionValue1);
                             if(conditionValue0 > conditionValue1){
                                 vBig = conditionValue0;
                                 vSmall = conditionValue1;
@@ -3510,7 +3513,7 @@ const conditionformat = {
                                     }
 
                                     //符合条件
-                                    if(cell.v >= vSmall && cell.v <= vBig){
+                                    if(Number(cell.v) >= vSmall && Number(cell.v) <= vBig){
                                         if((r + "_" + c) in computeMap){
                                             computeMap[r + "_" + c]["textColor"] = textColor;
                                             computeMap[r + "_" + c]["cellColor"] = cellColor;
