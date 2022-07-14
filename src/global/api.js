@@ -3194,11 +3194,11 @@ export function setRangeMerge(type, options = {}) {
             let c1 = range[i].column[0],
                 c2 = range[i].column[1];
 
-            if(r1 == r2 && c1 == c2){
+            if(r1 === r2 && c1 === c2){
                 continue;
             }
 
-            if(type == "all"){
+            if(type === "all"){
                 let fv = {}, isfirst = false;
 
                 for(let r = r1; r <= r2; r++){
@@ -3219,7 +3219,7 @@ export function setRangeMerge(type, options = {}) {
 
                 cfg["merge"][r1 + "_" + c1] = { "r": r1, "c": c1, "rs": r2 - r1 + 1, "cs": c2 - c1 + 1 };
             }
-            else if(type == "vertical"){
+            else if(type === "vertical"){
                 for(let c = c1; c <= c2; c++){
                     let fv = {}, isfirst = false;
 
@@ -3240,7 +3240,7 @@ export function setRangeMerge(type, options = {}) {
                     cfg["merge"][r1 + "_" + c] = { "r": r1, "c": c, "rs": r2 - r1 + 1, "cs": 1 };
                 }
             }
-            else if(type == "horizontal"){
+            else if(type === "horizontal"){
                 for(let r = r1; r <= r2; r++){
                     let fv = {}, isfirst = false;
 
@@ -3263,7 +3263,7 @@ export function setRangeMerge(type, options = {}) {
             }
         }
 
-        if(order == curSheetOrder){
+        if(order === curSheetOrder){
             if (Store.clearjfundo) {
                 Store.jfundo.length  = 0;
                 Store.jfredo.push({
@@ -3312,11 +3312,11 @@ export function cancelRangeMerge(options = {}) {
         cfg = $.extend(true, {}, file.config),
         data = $.extend(true, [], file.data);
 
-    if(data.length == 0){
+    if(data.length === 0){
         data = $.extend(true, [], sheetmanage.buildGridData(file));
     }
 
-    if(getObjType(range) == 'string'){
+    if(getObjType(range) === 'string'){
         if(!formula.iscelldata(range)){
             return tooltip.info('Incorrect selection format', '');
         }
@@ -3327,7 +3327,7 @@ export function cancelRangeMerge(options = {}) {
             "column": cellrange.column
         }]
     }
-    else if(getObjType(range) == 'object'){
+    else if(getObjType(range) === 'object'){
         if(!range.hasOwnProperty("row") || !range.hasOwnProperty("column")){
             return tooltip.info('Incorrect selection format', '');
         }
@@ -3371,7 +3371,7 @@ export function cancelRangeMerge(options = {}) {
         let c1 = range[i].column[0],
             c2 = range[i].column[1];
 
-        if(r1 == r2 && c1 == c2){
+        if(r1 === r2 && c1 === c2){
             continue;
         }
 
@@ -3407,7 +3407,7 @@ export function cancelRangeMerge(options = {}) {
         }
     }
 
-    if(order == curSheetOrder){
+    if(order === curSheetOrder){
         if (Store.clearjfundo) {
             Store.jfundo.length  = 0;
             Store.jfredo.push({

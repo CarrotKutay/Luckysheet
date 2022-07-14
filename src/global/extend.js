@@ -51,13 +51,13 @@ function luckysheetextendtable(type, index, value, direction, sheetIndex) {
             rs = mc.rs,
             cs = mc.cs;
 
-        if(type == "row"){
+        if(type === "row"){
             if(index < r){
                 merge_new[(r + value) + "_" + c] = { "r": r + value, "c": c, "rs": rs, "cs": cs };
             }
             // *这里要判断一下rs是否等于1,因为如果这个合并单元格的行数只有一行时r = r+ rs-1,这种情况不应该进行单元格的加高
-            else if (index == r && rs != 1) {
-                if(direction == "lefttop"){
+            else if (index === r && rs !== 1) {
+                if(direction === "lefttop"){
                     merge_new[(r + value) + "_" + c] = { "r": r + value, "c": c, "rs": rs, "cs": cs };
                 }
                 else{
@@ -67,9 +67,9 @@ function luckysheetextendtable(type, index, value, direction, sheetIndex) {
             else if(index < r + rs - 1){
                 merge_new[r + "_" + c] = { "r": r, "c": c, "rs": rs + value, "cs": cs };
             }
-            else if(index == r + rs - 1){
-                if(direction == "lefttop"){
-                    if(rs == 1){
+            else if(index === r + rs - 1){
+                if(direction === "lefttop"){
+                    if(rs === 1){
                         merge_new[(r + value) + "_" + c] = { "r": r + value, "c": c, "rs": rs, "cs": cs };
                     } else {
                         merge_new[r + "_" + c] = { "r": r, "c": c, "rs": rs + value, "cs": cs };
@@ -83,12 +83,12 @@ function luckysheetextendtable(type, index, value, direction, sheetIndex) {
                 merge_new[r + "_" + c] = { "r": r, "c": c, "rs": rs, "cs": cs };
             }
         }
-        else if(type == "column"){
+        else if(type === "column"){
             if(index < c){
                 merge_new[r + "_" + (c + value)] = { "r": r, "c": c + value, "rs": rs, "cs": cs };
             }
-            else if(index == c && cs != 1){
-                if(direction == "lefttop"){
+            else if(index === c && cs !== 1){
+                if(direction === "lefttop"){
                     merge_new[r + "_" + (c + value)] = { "r": r, "c": c + value, "rs": rs, "cs": cs };
                 }
                 else{
@@ -98,10 +98,10 @@ function luckysheetextendtable(type, index, value, direction, sheetIndex) {
             else if(index < c + cs - 1){
                 merge_new[r + "_" + c] = { "r": r, "c": c, "rs": rs, "cs": cs + value };
             }
-            else if(index == c + cs - 1){
-                if(direction == "lefttop"){
+            else if(index === c + cs - 1){
+                if(direction === "lefttop"){
                     // *这是要判断一下这个合并单元格的列宽是否=1,如果cs等于1的情况下,向左插入列，这个合并单元格会右移
-                    if(cs == 1){
+                    if(cs === 1){
                         merge_new[r + "_" + (c + value)] = { "r": r, "c": c + value, "rs": rs, "cs": cs };
                     } else {
                         merge_new[r + "_" + c] = { "r": r, "c": c, "rs": rs, "cs": cs + value };
@@ -126,19 +126,19 @@ function luckysheetextendtable(type, index, value, direction, sheetIndex) {
             let calc = $.extend(true, {}, calcChain[i]);
             let calc_r = calc.r, calc_c = calc.c, calc_i = calc.index, calc_funcStr =  getcellFormula(calc_r, calc_c, calc_i);
 
-            if(type == "row"){
+            if(type === "row"){
                 let functionStr = "=" + formula.functionStrChange(calc_funcStr, "add", "row", direction, index, value);
 
-                if(d[calc_r][calc_c] && d[calc_r][calc_c].f == calc_funcStr){
+                if(d[calc_r][calc_c] && d[calc_r][calc_c].f === calc_funcStr){
                     d[calc_r][calc_c].f = functionStr;
                 }
 
-                if(direction == "lefttop"){
+                if(direction === "lefttop"){
                     if(calc_r >= index){
                         calc.r += value;
                     }
                 }
-                else if(direction == "rightbottom"){
+                else if(direction === "rightbottom"){
                     if(calc_r > index){
                         calc.r += value;
                     }
@@ -146,19 +146,19 @@ function luckysheetextendtable(type, index, value, direction, sheetIndex) {
 
                 newCalcChain.push(calc);
             }
-            else if(type == "column"){
+            else if(type === "column"){
                 let functionStr = "=" + formula.functionStrChange(calc_funcStr, "add", "col", direction, index, value);
 
-                if(d[calc_r][calc_c] && d[calc_r][calc_c].f == calc_funcStr){
+                if(d[calc_r][calc_c] && d[calc_r][calc_c].f === calc_funcStr){
                     d[calc_r][calc_c].f = functionStr;
                 }
 
-                if(direction == "lefttop"){
+                if(direction === "lefttop"){
                     if(calc_c >= index){
                         calc.c += value;
                     }
                 }
-                else if(direction == "rightbottom"){
+                else if(direction === "rightbottom"){
                     if(calc_c > index){
                         calc.c += value;
                     }
